@@ -11,12 +11,44 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
 <body>
-  <header>header
-      <section class="search-bar">
-      </section>
+  <header>
+      <section class="search-bar-container">
+        <div class="settings-container">
+          <i class="fas fa-caret-left" id="left-arrow-icon"></i>
+          <i class="fas fa-list" id="settings-icon"></i>
+        </div>
+        <div class="search-container">
+          <i class="fas fa-search search-icon"></i>
+          <input type="text" class="search-bar" aria-label="Search Bar" placeholder="Search for a job, task, or resume">
+        </div>
+        <i class="fas fa-user-plus add-user-icon"></i>
+        <i class="far fa-calendar-alt header-calendar-icon"></i>
+        <i class="fas fa-th grid-icon"></i>
+       </section>
       <section class="banner">
+        <div class="banner-profile-container">
+          <h1>Front-End Engineer</h1>
+          <i class="fas fa-map-marker-alt small-map-icon"></i>
+          <p class="banner-location">Denver, Colorado &#8729 <span class="p-alt-color"> Preview this post</span></p>
+        </div>
+        <div class="banner-buttons-container">
+          <button id="open-button"><span class="green-dot">&#9679 </span> OPEN</button>
+          <button class="bookmark-button"><i class="fas fa-bookmark"></i></button>
+          <button class="edit-button"><i class="fas fa-pencil-alt"></i></button>
+          <button class="trash-button"><i class="fas fa-trash-alt"></i></button>
+        </div>
       </section>
-      <nav></nav>
+      <nav class="secondary-nav-menu-container">
+        <ul class="secondary-nav">
+          <li>SUMMARY</li>
+          <li>APPLICANTS</li>
+          <li>JOB BOARD</li>
+          <li>INTERVIEWS</li>
+          <li>ACTIVITY</li>
+          <li>BROADCAST</li>
+          <li>NOTIFICATIONS</li>
+        </ul>
+      </nav>
   </header>
   <aside class="sidebar">
     <section class="profile-sidebar">
@@ -60,7 +92,7 @@
           <td>LOCATIONS</td>
         </tr>
         <tr>
-          <td class="table-icon"><i class="fas fa-tasks workflows-icon"></i></td>
+          <td class="table-icon"><i class="fas fa-sitemap workflows-icon"></i></td>
           <td>WORKFLOWS</td>
           </tr>
         <tr>

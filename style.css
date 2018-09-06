@@ -1,17 +1,19 @@
-/*MAIN GRID*/
+/*MAIN GRID////////////////////////////////*/
 body {
   font-family: 'Open Sans', sans-serif;
+  color: rgb(61, 61, 61);
   display: grid;
   grid-template-columns: 210px 1fr;
   grid-template-rows: 1fr 5fr;
   grid-template-areas: 
       "sidebar header"
-      "sidebar main"
+      "sidebar main";
+  margin: 0;
 }
 
 header {
   grid-area: header;
-  background-color: red;
+  background-color: white;
 }
 
 .sidebar {
@@ -26,7 +28,162 @@ main {
   background-color: green;
 }
 
-/*SIDEBAR*/
+/*HEADER///////////////////////////////////*/
+
+/*SEARCH SECTION*/
+
+.search-bar-container {
+  align-items: center;
+  border-bottom: 2px solid rgb(243, 243, 243);
+  display: flex;
+  justify-content: space-between;
+  padding-right: 15px;
+  padding: 0;
+}
+
+.search-bar-container i {
+  font-size: 1.13em;
+  padding: 22px;
+  margin: 0;
+  color: rgb(143, 143, 143);
+  border-left: 2px solid rgb(243, 243, 243);
+}
+
+.search-bar-container i:hover,
+.settings-container:hover,
+.settings-container:hover #left-arrow-icon,
+.settings-container:hover #settings-icon {
+  background-color: rgb(72, 163, 243);
+  color: white;
+  cursor: pointer;
+}
+
+#left-arrow-icon,
+#settings-icon {
+  padding-top: 22px;
+  padding-bottom: 22px;
+  border: none;
+}
+
+#left-arrow-icon {
+  padding-right: 0;
+  padding-left: 20px;
+}
+
+#settings-icon {
+  padding-left: 0;
+  padding-right: 20px;
+}
+
+.search-container {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.search-bar {
+  width: 90%;
+  border: 0;
+  padding: 10px 0;
+  font-size: 1em;
+}
+
+::placeholder {
+  color: rgb(190, 190, 190);
+}
+
+/*BANNER PROFILE*/
+
+.banner {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 40px 20px;
+}
+
+.banner h1 {
+  font-weight: 600;
+  margin: 0;
+}
+
+.banner-location {
+  color: rgb(155, 155, 155);
+  display: inline-block;
+  margin: 5px 0px;
+  font-size: .8em;
+}
+
+.small-map-icon {
+  margin: 0 2px;
+  font-size: .8em;
+}
+
+.p-alt-color {
+  color:rgb(103, 184, 255);
+}
+
+.p-alt-color:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.banner-buttons-container button {
+  border: 2px solid rgb(214, 214, 214);
+  border-radius: 50%;
+  color: rgb(136, 136, 136);
+  margin: 3px;
+  padding: 8px 10px;
+}
+
+.banner-buttons-container button:hover {
+  background-color: rgb(136, 136, 136);
+  color: white;
+  cursor: pointer;
+}
+
+.banner-buttons-container i {
+  height: 11px;
+  width: 11px;
+}
+
+#open-button {
+  border-radius: 20px;
+}
+
+.green-dot {
+  color : rgb(1, 190, 1);
+}
+
+/*BANNER SECONDARY NAV MENU*/
+
+.secondary-nav-menu-container {
+  border-bottom: 2px solid rgb(184, 184, 184);
+}
+
+.secondary-nav {
+  display: flex;
+  justify-content: flex-start;
+  list-style-type: none;
+  margin-bottom: 0;
+}
+
+.secondary-nav li {
+  border-bottom: 2px solid white;
+  color:rgb(136, 136, 136);
+  font-size: .9em;
+  font-weight: 600;
+  margin: 15px 40px 0 0;
+  padding-bottom: 17px;
+}
+
+.secondary-nav li:hover {
+  border-color:rgb(72, 163, 243);
+  color:rgb(55, 64, 80);
+  cursor: pointer;
+}
+
+/*SIDEBAR////////////////////////////////////*/
 
 aside section {
   background-color:rgb(55, 64, 80);
@@ -82,8 +239,9 @@ aside i {
 }
 
 aside tr:hover {
-  color: white;
   background-color: rgb(47, 54, 66);
+  color: white;
+  cursor: pointer;
 }
 
 .catagories-form {
