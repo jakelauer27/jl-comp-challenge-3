@@ -1,0 +1,157 @@
+/*MAIN GRID*/
+body {
+  font-family: 'Open Sans', sans-serif;
+  display: grid;
+  grid-template-columns: 210px 1fr;
+  grid-template-rows: 1fr 5fr;
+  grid-template-areas: 
+      "sidebar header"
+      "sidebar main"
+}
+
+header {
+  grid-area: header;
+  background-color: red;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+main {
+  grid-area: main;
+  background-color: green;
+}
+
+/*SIDEBAR*/
+
+aside section {
+  background-color:rgb(55, 64, 80);
+  border-bottom: 3px solid rgb(47, 54, 66);
+  color: rgb(155, 169, 192);
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+}
+
+.profile-pic {
+  width: 90px;
+  border-radius: 50%;
+  margin-top: 30px;
+}
+
+.profile-name {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.profile-down {
+  position: absolute;
+  top: -4px;
+  right: -20px;
+  font-size: .8em;
+}
+
+.profile-sidebar {
+  justify-content: center;
+  align-items: center;
+}
+
+aside h3 {
+  color: rgb(96, 108, 124);
+  font-weight: 400;
+  font-size: 1em;
+  margin: 34px 20px 5px 19px;
+}
+
+aside table {
+  margin-bottom: 25px;
+  border-collapse: collapse;
+}
+
+aside i {
+  margin: 14px 0 14px 20px;
+}
+
+.table-icon {
+  width: 46px;
+}
+
+aside tr:hover {
+  color: white;
+  background-color: rgb(47, 54, 66);
+}
+
+.catagories-form {
+  margin-top: 18px;
+  padding-left: 20px;
+}
+
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 24px;
+  cursor: pointer;
+  font-size: .9em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  height: 16px;
+  width: 16px;
+}
+
+.checkmark-admin {
+  background-color: rgb(243, 214, 74);
+}
+
+.checkmark-design {
+  background-color: rgb(83, 173, 246);
+}
+
+.checkmark-executive {
+  background-color: rgb(215, 55, 99);
+}
+
+.checkmark-hr {
+  background-color: rgb(75, 167, 137);
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox-container .checkmark:after {
+  left: 5px;
+  top: 3px;
+  width: 3px;
+  height: 5px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
