@@ -105,6 +105,7 @@ main {
 .banner h1 {
   font-weight: 600;
   margin: 0;
+  color: rgb(100, 100, 100)
 }
 
 .banner-location {
@@ -117,6 +118,7 @@ main {
 .small-map-icon {
   margin: 0 2px;
   font-size: .8em;
+  color: rgb(155,155,155)
 }
 
 .p-alt-color {
@@ -323,21 +325,37 @@ aside tr:hover {
 /*MAIN SECTION//////////////////////////////////////*/
 
 main {
-  background-color: rgb(238, 242, 246)
+  background-color: rgb(238, 242, 246);
+  color: rgb(100, 100, 100);
 }
 
 /*Charts Section*/
 
+.charts {
+  display: flex;
+}
+
+/*CIRCLE CHARTS*/
+
 .circle-chart {
   position: relative;
   width: 120px;
+  margin: 30px;
 }
 
 .circle-chart-label {
   position: absolute;
-  top: 100px;
-  left: 20px;
-  font-size: .9em;
+  top: 70px;
+  left: 45px;
+  font-size: .8em;
+}
+
+.circle-chart-value {
+  position: absolute;
+  top: 25px;
+  left: 43px;
+  font-size: 1.8em;
+  font-weight: 400;
 }
 
 .inner-circle {
@@ -345,62 +363,99 @@ main {
   stroke-width: 12;
 }
 
-.applicants-circle-fill {
-  stroke: rgb(131, 203, 211);
+.circle-fill {
   stroke-linecap: round;
   stroke-width: 12;
-  stroke-dasharray: 339.292; 
-  stroke-dashoffset: 135.717;
+  stroke-dasharray: 401.92; 
+}
+
+.applicants-circle-fill {
+  stroke: rgb(131, 203, 211);
+  stroke-dashoffset: 85.717;
   animation: applicants-progress 1.5s;
 }
 
 .interviews-circle-fill {
   stroke: rgb(70, 149 ,152);
-  stroke-width: 12;
-  stroke-linecap: round;
-  stroke-dasharray: 339.292; 
-  stroke-dashoffset: 85.717;
+  stroke-dashoffset: 125.717;
   animation: interviews-progress 1.5s;
 }
 
 .forwards-circle-fill {
   stroke: rgb(164, 113, 172);
-  stroke-width: 12;
-  stroke-linecap: round;
-  stroke-dasharray: 339.292; 
-  stroke-dashoffset: 189.717;
+  stroke-dashoffset: 219.717;
   animation: forwards-progress 1.5s;
 }
 
 svg {
-  height: 120px;
-  width: 120px;
+  height: 160px;
+  width: 160px;
   transform: rotate(-90deg);
 }
 
 @keyframes applicants-progress {
 	from {
-		stroke-dashoffset: 339.292;
-	}
-	to {
-		stroke-dashoffset: 135.717;
-	}
-}
-
-@keyframes interviews-progress {
-	from {
-		stroke-dashoffset: 339.292;
+		stroke-dashoffset: 401.92;
 	}
 	to {
 		stroke-dashoffset: 85.717;
 	}
 }
 
-@keyframes forwards-progress {
+@keyframes interviews-progress {
 	from {
-		stroke-dashoffset: 339.292;
+		stroke-dashoffset: 401.92;
 	}
 	to {
-		stroke-dashoffset: 189.717;
+		stroke-dashoffset: 125.717;
 	}
+}
+
+@keyframes forwards-progress {
+	from {
+		stroke-dashoffset: 401.92;
+	}
+	to {
+		stroke-dashoffset: 219.717;
+	}
+}
+
+/*BAR CHART*/
+
+.chart {
+  display: grid;
+  grid-template-columns: repeat(14, 25px);
+  grid-template-rows: repeat(500, 1fr) 1.4rem;
+  position: relative;
+  height: 200px
+}
+.bar {  
+  grid-row-end: -2;
+  grid-row-start: var(--start);
+  background-color: rgb(70, 149 ,152);
+  width: 15px;
+  border-radius: 5px 5px 0 0;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.background-bar {
+  background-color: rgb(182, 38, 38);
+  position: relative;
+  right: 10px;
+  grid-row-start: 1;
+  grid-row-end: -2;
+  width: 15px;
+}
+
+.day {
+  grid-row-start: -2;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  grid-row: -2 / span 1;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  z-index: 2;
 }
