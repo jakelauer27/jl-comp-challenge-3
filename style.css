@@ -3,12 +3,13 @@ body {
   font-family: 'Open Sans', sans-serif;
   color: rgb(61, 61, 61);
   display: grid;
-  grid-template-columns: 210px 1fr;
+  grid-template-columns: 190px 1fr;
   grid-template-rows: 1fr 5fr;
   grid-template-areas: 
       "sidebar header"
       "sidebar main";
   margin: 0;
+  overflow-x: hidden;
 }
 
 header {
@@ -91,6 +92,14 @@ main {
 
 ::placeholder {
   color: rgb(190, 190, 190);
+}
+
+.hide {
+  display: none;
+}
+
+.expand-body {
+  grid-template-columns: 0px 1fr;
 }
 
 /*BANNER PROFILE*/
@@ -200,14 +209,16 @@ aside section {
 /*PROFILE SECTION*/
 
 .profile-pic {
-  width: 90px;
+  width: 80px;
   border-radius: 50%;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .profile-name {
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  font-size: .8em;
 }
 
 .profile-down {
@@ -225,8 +236,12 @@ aside section {
 aside h3 {
   color: rgb(96, 108, 124);
   font-weight: 400;
-  font-size: 1em;
+  font-size: .9em;
   margin: 34px 20px 5px 19px;
+}
+
+td {
+  font-size: .8em
 }
 
 /*NAV LIST TABLES*/
@@ -261,7 +276,7 @@ aside tr:hover {
   display: block;
   position: relative;
   padding-left: 30px;
-  margin-bottom: 24px;
+  margin-bottom: 25px;
   cursor: pointer;
   font-size: .9em;
   -webkit-user-select: none;
@@ -331,16 +346,23 @@ main {
 
 /*Charts Section*/
 
-.charts {
+.charts-section {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 /*CIRCLE CHARTS*/
 
+.circle-charts {
+  display: flex;
+  justify-content: space-between;
+}
+
 .circle-chart {
   position: relative;
   width: 120px;
-  margin: 30px;
+  margin: 30px 50px 30px 20px;
 }
 
 .circle-chart-label {
@@ -376,7 +398,7 @@ main {
 }
 
 .interviews-circle-fill {
-  stroke: rgb(70, 149 ,152);
+  stroke: rgb(74, 168, 172);
   stroke-dashoffset: 125.717;
   animation: interviews-progress 1.5s;
 }
@@ -387,7 +409,7 @@ main {
   animation: forwards-progress 1.5s;
 }
 
-svg {
+.circle-svg {
   height: 160px;
   width: 160px;
   transform: rotate(-90deg);
@@ -422,40 +444,87 @@ svg {
 
 /*BAR CHART*/
 
-.chart {
-  display: grid;
-  grid-template-columns: repeat(14, 25px);
-  grid-template-rows: repeat(500, 1fr) 1.4rem;
+
+.bar-chart {
+  align-content: flex-start;
+  display: flex;
+  margin: 0 20px;
   position: relative;
-  height: 200px
 }
-.bar {  
-  grid-row-end: -2;
-  grid-row-start: var(--start);
-  background-color: rgb(70, 149 ,152);
-  width: 15px;
-  border-radius: 5px 5px 0 0;
-  margin: 0 auto;
-  z-index: 1;
+
+#bar-graph-labels {
+  list-style: none;
+  font-size: .7em;
+  justify-content: space-between;
+  height: 125px;
+  position: absolute;
+  top: -5px;
+  left: -65px;
+}
+
+.bar-section {
+  display: flex;
+  flex-direction: column-reverse;
+  align-content: center;
+  justify-content: center;
+  height: 150px
+}
+
+.bar-graphs {
+  height: 140px;
+  margin: 5px;
+  transform: rotate(180deg);
+  width: 11px;
+}
+
+.bar {
+  fill:rgb(74, 168, 172);
+  width: 10px;
+  animation: barChartFill 1.5s;
+}
+
+.bar:hover {
+  fill: rgb(61, 140, 143)
 }
 
 .background-bar {
-  background-color: rgb(182, 38, 38);
-  position: relative;
-  right: 10px;
-  grid-row-start: 1;
-  grid-row-end: -2;
-  width: 15px;
+  fill: #d1d1d1;
+  height: 120px;
+  width: 10px;
 }
 
 .day {
-  grid-row-start: -2;
-  align-items: center;
-  display: flex;
-  font-weight: bold;
-  grid-row: -2 / span 1;
-  justify-content: center;
-  position: relative;
+  font-size: .8em;
   text-align: center;
-  z-index: 2;
+  margin: 0;
+}
+
+.main-chart-label {
+  position: relative;
+  font-size: .75em;
+  background-color: white;
+  padding: 5px;
+  text-align: center;
+  border: 2px solid #d1d1d1;
+  border-radius: 20px;
+  margin: 0 auto;
+}
+
+.full-bar-chart-label {
+  bottom: -20px;
+  width: 120px;
+}
+
+.full-circle-chart-label {
+  bottom: 14px;
+  width: 190px;
+}
+
+@keyframes barChartFill {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100;
+  }
 }

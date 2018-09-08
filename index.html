@@ -129,73 +129,152 @@
   </aside>
   <main>
       <article class="charts-section">
-        <section class="charts">
-          <div class="applicants-circle-chart circle-chart">
-            <h2 class="circle-chart-value">4,345</h2>
-            <p class="circle-chart-label">APPLICANTS</p>
-            <svg>
-              <circle class="inner-circle" cx="80" cy="80" r="64" fill="none"/>
-              <circle class="applicants-circle-fill circle-fill" cx="80" cy="80" r="64" fill="none"/>
-            </svg>
+        <section>
+          <div class="circle-charts">
+            <div class="applicants-circle-chart circle-chart">
+              <h2 class="circle-chart-value">4,345</h2>
+              <p class="circle-chart-label">APPLICANTS</p>
+              <svg class="circle-svg">
+                <circle class="inner-circle" cx="80" cy="80" r="64" fill="none"/>
+                <circle class="applicants-circle-fill circle-fill" cx="80" cy="80" r="64" fill="none"/>
+              </svg>
+            </div>
+            <div class="interviews-circle-chart circle-chart">
+              <h2 class="circle-chart-value">3,235</h2>
+              <p class="circle-chart-label">INTERVIEWS</p>
+              <svg class="circle-svg">
+                <circle class="inner-circle" cx="80" cy="80" r="64" fill="none"/>
+                <circle class="interviews-circle-fill circle-fill" cx="80" cy="80" r="64" fill="none"/>
+              </svg>
+            </div>
+            <div class="forwards-circle-chart circle-chart">
+              <h2 class="circle-chart-value">1,987</h2>
+              <p class="circle-chart-label">FORWARDS</p>
+              <svg class="circle-svg">
+                <circle class="inner-circle" cx="80" cy="80" r="64" fill="none"/>
+                <circle class="forwards-circle-fill circle-fill" cx="80" cy="80" r="64" fill="none"/>
+              </svg>
+            </div>
           </div>
-          <div class="interviews-circle-chart circle-chart">
-            <h2 class="circle-chart-value">3,235</h2>
-            <p class="circle-chart-label">INTERVIEWS</p>
-            <svg>
-              <circle class="inner-circle" cx="80" cy="80" r="64" fill="none"/>
-              <circle class="interviews-circle-fill circle-fill" cx="80" cy="80" r="64" fill="none"/>
-            </svg>
-          </div>
-          <div class="forwards-circle-chart circle-chart">
-            <h2 class="circle-chart-value">1,987</h2>
-            <p class="circle-chart-label">FORWARDS</p>
-            <svg>
-              <circle class="inner-circle" cx="80" cy="80" r="64" fill="none"/>
-              <circle class="forwards-circle-fill circle-fill" cx="80" cy="80" r="64" fill="none"/>
-            </svg>
-          </div>
-          <dl class="chart">
-            <dt class="day">S</dt>
-            <dd class="bar" style="--start: 201" data-amount="300"></dd>
-            <!-- <dd class="background-bar"></dd> -->
-            <dt class="day">M</dt> 
-            <dd class="bar" style="--start: 71" data-amount="430"></dd>
-            <dt class="day">T</dt>
-            <dd class="bar" style="--start: 100" data-amount="401"></dd>
-            <dt class="day">W</dt> 
-            <dd class="bar" style="--start: 246" data-amount="255"></dd>
-            <dt class="day">T</dt>
-            <dd class="bar" style="--start: 189" data-amount="312"></dd>
-            <dt class="day">F</dt> 
-            <dd class="bar" style="--start: 409" data-amount="92"></dd>
-            <dt class="day">S</dt>
-            <dd class="bar" style="--start: 455" data-amount="46"></dd>
-            <dt class="day">S</dt>
-            <dd class="bar" style="--start: 401" data-amount="100"></dd>
-            <dt class="day">M</dt> 
-            <dd class="bar" style="--start: 36" data-amount="465"></dd>
-            <dt class="day">T</dt>
-            <dd class="bar" style="--start: 102" data-amount="399"></dd>
-            <dt class="day">W</dt> 
-            <dd class="bar" style="--start: 226" data-amount="275"></dd>
-            <dt class="day">T</dt>
-            <dd class="bar" style="--start: 187" data-amount="314"></dd>
-            <dt class="day">F</dt> 
-            <dd class="bar" style="--start: 431" data-amount="70"></dd>
-            <dt class="day">S</dt>
-            <dd class="bar" style="--start: 414" data-amount="87"></dd>
-          </dl>
-        </section>
-        <section class="chart-labels">
-        </section>
-      </article>
+          <h3 class="main-chart-label full-circle-chart-label">TOTALS  &#8729 Out of 5,231 views</h3> 
+          </section>
+          <section class="bar-chart-container">
+            <div class="bar-chart">
+              <ul class="bar-section" id="bar-graph-labels">
+                <li>0</li>
+                <li>100</li>
+                <li>200</li>
+                <li>300</li>
+                <li>400</li>
+                <li>500</li>
+              </ul>
+              <div class="bar-section">
+                  <h3 class="day">S</h3>
+                  <svg class="bar-graphs">
+                    <rect class="background-bar" rx="2" ry="2"/>
+                    <rect class="bar" rx="2" ry="2" height="43"/>
+                  </svg>
+                </div>
+              <div class="bar-section">
+                <h3 class="day">M</h3>
+                <svg class="bar-graphs">
+                  <rect class="background-bar" rx="2" ry="2"/>
+                  <rect class="bar" rx="2" ry="2" height="83"/>
+                </svg>
+              </div>
+              <div class="bar-section">
+                <h3 class="day">T</h3>
+                <svg class="bar-graphs">
+                  <rect class="background-bar" rx="2" ry="2"/>
+                  <rect class="bar" rx="2" ry="2" height="78"/>
+                </svg>
+              </div>
+              <div class="bar-section">
+                <h3 class="day">W</h3>
+                <svg class="bar-graphs">
+                  <rect class="background-bar" rx="2" ry="2"/>
+                  <rect class="bar" rx="2" ry="2" height="68"/>
+                </svg>
+              </div>
+              <div class="bar-section">
+                <h3 class="day">T</h3>
+                <svg class="bar-graphs">
+                  <rect class="background-bar" rx="2" ry="2"/>
+                  <rect class="bar" rx="2" ry="2" height="52"/>
+                </svg>
+              </div>
+              <div class="bar-section">
+                <h3 class="day">F</h3>
+                <svg class="bar-graphs">
+                  <rect class="background-bar" rx="2" ry="2"/>
+                  <rect class="bar" rx="2" ry="2" height="34"/>
+                </svg>
+              </div>
+              <div class="bar-section">
+                <h3 class="day">S</h3>
+                <svg class="bar-graphs">
+                  <rect class="background-bar" rx="2" ry="2"/>
+                  <rect class="bar" rx="2" ry="2" height="18"/>
+                </svg>
+              </div>
+              <div class="bar-section">
+                <h3 class="day">S</h3>
+                <svg class="bar-graphs">
+                  <rect class="background-bar" rx="2" ry="2"/>
+                  <rect class="bar" rx="2" ry="2" height="34"/>
+                </svg>
+              </div>
+              <div class="bar-section">
+                <h3 class="day">M</h3>
+                <svg class="bar-graphs">
+                  <rect class="background-bar" rx="2" ry="2"/>
+                  <rect class="bar" rx="2" ry="2" height="83"/>
+                </svg>
+              </div>
+              <div class="bar-section">
+                <h3 class="day">T</h3>
+                <svg class="bar-graphs">
+                  <rect class="background-bar" rx="2" ry="2"/>
+                  <rect class="bar" rx="2" ry="2" height="78"/>
+                </svg>
+              </div>
+              <div class="bar-section">
+                <h3 class="day">W</h3>
+                <svg class="bar-graphs">
+                  <rect class="background-bar" rx="2" ry="2"/>
+                  <rect class="bar" rx="2" ry="2" height="68"/>
+                </svg>
+              </div>
+              <div class="bar-section">
+                <h3 class="day">T</h3>
+                <svg class="bar-graphs">
+                  <rect class="background-bar" rx="2" ry="2"/>
+                  <rect class="bar" rx="2" ry="2" height="52"/>
+                </svg>
+              </div>
+              <div class="bar-section">
+                <h3 class="day">F</h3>
+                <svg class="bar-graphs">
+                  <rect class="background-bar" rx="2" ry="2"/>
+                  <rect class="bar" rx="2" ry="2" height="34"/>
+                </svg>
+              </div>
+              <div class="bar-section">
+                <h3 class="day">S</h3>
+                <svg class="bar-graphs">
+                  <rect class="background-bar" rx="2" ry="2"/>
+                  <rect class="bar" rx="2" ry="2" height="18"/>
+                </svg>
+              </div>     
+            </div>
+            <h3 class="main-chart-label full-bar-chart-label">APPLICANTS/DAY</h3>    
+          </section>
+        </article>
       <article class="job-section">  
       </article>
       <article class="contact-section">
       </article>
   </main>
- 
-  
-  
+  <script src="scripts.js"></script>
 </body>
 </html>
