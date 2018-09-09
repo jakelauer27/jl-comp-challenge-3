@@ -12,6 +12,14 @@ body {
   overflow-x: hidden;
 }
 
+button {
+  outline: none;
+}
+
+input {
+  outline: none;
+}
+
 header {
   grid-area: header;
   background-color: white;
@@ -189,7 +197,7 @@ main {
 }
 
 .secondary-nav li:hover {
-  border-color:rgb(72, 163, 243);
+  border-color:rgb(83, 173, 246);
   color:rgb(55, 64, 80);
   cursor: pointer;
 }
@@ -359,12 +367,12 @@ main {
 /*Charts Section/////////////////////////////////////*/
 
 .charts-section {
-  border-bottom: 2px solid #d1d1d1;
-  display: flex;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
   justify-content: space-between;
   align-items: center;
   margin: 20px 45px;
-  padding-bottom: 30px;
+  padding-bottom: 70px;
 }
 
 /*CIRCLE CHARTS*/
@@ -372,12 +380,12 @@ main {
 .circle-charts {
   display: flex;
   justify-content: space-between;
+  padding-right: 25px;
 }
 
 .circle-chart {
   position: relative;
-  width: 120px;
-  margin: 30px 50px 30px 20px;
+  margin: 30px 0 30px 0;
 }
 
 .applicants-circle-chart {
@@ -432,6 +440,14 @@ main {
   height: 160px;
   width: 160px;
   transform: rotate(-90deg);
+  display: block;
+}
+
+#full-circle-chart-label {
+  bottom: -70px;
+  right: -24px;
+  width: 190px;
+  position: absolute;
 }
 
 @keyframes applicants-progress {
@@ -463,11 +479,18 @@ main {
 
 /*BAR CHART*/
 
+.bar-chart-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
 .bar-chart {
-  align-content: flex-start;
   display: flex;
   margin: 0;
   position: relative;
+  top: 2px;
+  padding-left: 25px;
 }
 
 #bar-graph-labels {
@@ -476,9 +499,9 @@ main {
   font-size: .7em;
   justify-content: space-between;
   height: 155px;
-  position: absolute;
+  position: relative;
   top: -5px;
-  left: -65px;
+  left: -10px;
 }
 
 .bar-section {
@@ -486,7 +509,8 @@ main {
   flex-direction: column-reverse;
   align-content: center;
   justify-content: center;
-  height: 180px
+  height: 180px;
+  position: relative;
 }
 
 .bar-graphs {
@@ -507,7 +531,7 @@ main {
 }
 
 .background-bar {
-  fill: #d1d1d1;
+  fill: #d8e3e7;
   height: 150px;
   width: 14px;
 }
@@ -519,7 +543,6 @@ main {
 }
 
 .main-chart-label {
-  position: relative;
   font-size: .75em;
   background-color: white;
   padding: 5px;
@@ -530,13 +553,10 @@ main {
 }
 
 .full-bar-chart-label {
-  bottom: -20px;
+  position: absolute;
+  bottom: -56px;
+  right: 130px;
   width: 120px;
-}
-
-.full-circle-chart-label {
-  bottom: 0px;
-  width: 190px;
 }
 
 @keyframes barChartFill {
@@ -548,6 +568,82 @@ main {
   }
 }
 
+.section-break {
+  display: flex;
+  margin: 0 40px;
+}
+
+.section-break hr {
+  border-color: rgb(245, 245, 245);
+  width: 50%;
+}
+
+.section-break-carrot {
+  background-color: white;
+  border: 2px solid rgb(209, 209, 209);
+  border-radius: 50%;
+  color: rgb(209, 209, 209);
+  padding: 5px 7px;
+  margin: 0 5px;
+}
+
+.section-break-carrot:hover {
+  background-color: rgb(209, 209, 209);
+  border-color: white;
+  color: white;
+}
+
+.toggle-up-arrow {
+  transform: rotate(180deg);
+}
+
+.toggle-up {
+  display: none;
+}
+
+.charts-hidden {
+  margin: 10px;
+  text-align: center;
+}
+
+.bar-info-popup {
+  background-color: rgb(55, 64, 80);
+  color: rgb(238, 238, 238);
+  font-size: .75em;
+  padding: 8px;
+  padding-bottom: 0;
+  position: absolute;
+  left: -83px;
+  z-index: 3;
+  width: 180px;
+}
+
+h4 {
+  text-align: center;
+  margin: 2px;
+}
+
+.bar-info-text{
+  margin: 2px;
+  text-align: center;
+}
+
+.blue-text {
+  color: rgb(64, 182, 250);
+}
+
+.triangle {
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent; 
+    border-top: 10px solid rgb(55, 64, 80);
+    height: 0; 
+    position: relative;
+    margin: 0 auto;
+    right: 2px;
+    bottom: -8px;
+    width: 0; 
+  }
+
 /*JOB DESCRIPTION SECTION /////////////*/
 
 .job-description-container {
@@ -558,16 +654,30 @@ main {
     "description link"
     "description budget"
     "description email";
-  margin-top: 40px;
+  margin-top: 35px;
   padding: 20px 40px;
 }
 
-/*JOB DESCRIPTION*/
-
 .description {
+  border-radius: 2px;
   grid-area: description;
   background-color: white;
 }
+
+.link {
+  grid-area: link;
+}
+
+.budget {
+  grid-area: budget;
+}
+
+.email {
+  grid-area: email;
+}
+
+
+/*JOB DESCRIPTION*/
 
 .job-description-table {
   border-collapse: collapse;
@@ -577,10 +687,11 @@ main {
 .job-description-table td {
   color:rgb(114, 126, 147);
   border-bottom: 1px solid #e9e9e9;
-  padding: 20px 0;
+  padding: 22px 0;
 }
 
  .top-row {
+  border-radius: 2px 2px 0 0 ;
   background-color: rgb(96, 106, 122);
   padding: 10px 0; 
 }
@@ -629,20 +740,104 @@ main {
   border-radius: 50%;
 }
 
+#bottom-table-item1,
+#bottom-table-item2 {
+  border: 0;
+}
+
 /*MEDIA CONTENT*/
 
 .social {
+  margin-left: 40px;
+}
+
+.social h2 {
+  font-size: 1.1em;
+}
+
+.social i {
+  margin-right: 5px;
+}
+
+.social p {
+  font-size: .8em;
+}
+
+.social-buttons {
   grid-area: social;
+  display: flex;
+  flex-direction: column;
 }
 
-.link {
-  grid-area: link;
+.social-button {
+  border: 0;
+  border-radius: 2px;
+  color: white;
+  font-size: .8em;
+  font-weight: 600;
+  margin-bottom: 15px;
+  padding: 14px;
+  position: relative;
 }
 
-.budget {
-  grid-area: budget;
+.social-button:hover {
+  opacity: .7;
 }
 
-.email {
-  grid-area: email;
+.social-media-icon {
+  font-size: 1.3em;
+  position: absolute;
+  left: 20px;
+  top: 16px;
+}
+
+.facebook {
+  background-color: rgb(83, 114, 189)
+}
+
+.twitter {
+  background-color:rgb(73, 170, 234)
+}
+
+.linked-in {
+  background-color:rgb(53, 128, 153)
+}
+
+hr {
+  border-color: #dbdbdb;
+  margin: 15px 0;
+}
+
+.share-text-inputs {
+  border: 1px solid #e9e9e9;
+  padding: 12px;
+  margin-bottom: 15px;
+  width: 100%
+}
+
+.copy-link-button {
+  background-color: rgb(72, 193, 197);
+  color: white;
+  border: 0;
+  border-radius: 0 3px 3px 0;
+  height: 38px;
+  padding: 12px;
+}
+
+.copy-link-button:hover {
+  opacity: .7;
+}
+
+.upload-via-email-input {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.input-container {
+  display: flex;
+  width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+
 }
