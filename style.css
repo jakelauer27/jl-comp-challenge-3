@@ -3,12 +3,13 @@ body {
   font-family: 'Open Sans', sans-serif;
   color: rgb(61, 61, 61);
   display: grid;
-  grid-template-columns: 210px 1fr;
+  grid-template-columns: 190px 1fr;
   grid-template-rows: 1fr 5fr;
   grid-template-areas: 
       "sidebar header"
       "sidebar main";
   margin: 0;
+  overflow-x: hidden;
 }
 
 header {
@@ -93,6 +94,14 @@ main {
   color: rgb(190, 190, 190);
 }
 
+.hide {
+  display: none;
+}
+
+.expand-body {
+  grid-template-columns: 0px 1fr;
+}
+
 /*BANNER PROFILE*/
 
 .banner {
@@ -105,6 +114,7 @@ main {
 .banner h1 {
   font-weight: 600;
   margin: 0;
+  color: rgb(100, 100, 100)
 }
 
 .banner-location {
@@ -117,6 +127,7 @@ main {
 .small-map-icon {
   margin: 0 2px;
   font-size: .8em;
+  color: rgb(155,155,155)
 }
 
 .p-alt-color {
@@ -185,6 +196,10 @@ main {
 
 /*SIDEBAR////////////////////////////////////*/
 
+aside {
+  background-color:rgb(55, 64, 80);
+}
+
 aside section {
   background-color:rgb(55, 64, 80);
   border-bottom: 3px solid rgb(47, 54, 66);
@@ -198,14 +213,16 @@ aside section {
 /*PROFILE SECTION*/
 
 .profile-pic {
-  width: 90px;
+  width: 80px;
   border-radius: 50%;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .profile-name {
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  font-size: .8em;
 }
 
 .profile-down {
@@ -223,8 +240,12 @@ aside section {
 aside h3 {
   color: rgb(96, 108, 124);
   font-weight: 400;
-  font-size: 1em;
+  font-size: .9em;
   margin: 34px 20px 5px 19px;
+}
+
+td {
+  font-size: .8em
 }
 
 /*NAV LIST TABLES*/
@@ -250,6 +271,10 @@ aside tr:hover {
 
 /*CHECKBOX STYLING*/ 
 
+.catagories-sidebar {
+  border-bottom: none;
+}
+
 .catagories-form {
   margin-top: 18px;
   padding-left: 20px;
@@ -259,13 +284,17 @@ aside tr:hover {
   display: block;
   position: relative;
   padding-left: 30px;
-  margin-bottom: 24px;
+  margin-bottom: 25px;
   cursor: pointer;
   font-size: .9em;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.checkbox-container:hover {
+  color: white;
 }
 
 .checkbox-container input {
@@ -323,21 +352,51 @@ aside tr:hover {
 /*MAIN SECTION//////////////////////////////////////*/
 
 main {
-  background-color: rgb(238, 242, 246)
+  background-color: rgb(238, 242, 246);
+  color: rgb(100, 100, 100);
 }
 
-/*Charts Section*/
+/*Charts Section/////////////////////////////////////*/
+
+.charts-section {
+  border-bottom: 2px solid #d1d1d1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 45px;
+  padding-bottom: 30px;
+}
+
+/*CIRCLE CHARTS*/
+
+.circle-charts {
+  display: flex;
+  justify-content: space-between;
+}
 
 .circle-chart {
   position: relative;
   width: 120px;
+  margin: 30px 50px 30px 20px;
+}
+
+.applicants-circle-chart {
+  margin-left: -10px;
 }
 
 .circle-chart-label {
   position: absolute;
-  top: 100px;
-  left: 20px;
-  font-size: .9em;
+  top: 70px;
+  left: 45px;
+  font-size: .8em;
+}
+
+.circle-chart-value {
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  font-size: 2em;
+  font-weight: 400;
 }
 
 .inner-circle {
@@ -345,62 +404,245 @@ main {
   stroke-width: 12;
 }
 
-.applicants-circle-fill {
-  stroke: rgb(131, 203, 211);
+.circle-fill {
   stroke-linecap: round;
   stroke-width: 12;
-  stroke-dasharray: 339.292; 
-  stroke-dashoffset: 135.717;
+  stroke-dasharray: 464.72; 
+}
+
+.applicants-circle-fill {
+  stroke: rgb(72, 193, 197);
+  stroke-dashoffset: 85.717;
   animation: applicants-progress 1.5s;
 }
 
 .interviews-circle-fill {
-  stroke: rgb(70, 149 ,152);
-  stroke-width: 12;
-  stroke-linecap: round;
-  stroke-dasharray: 339.292; 
-  stroke-dashoffset: 85.717;
+  stroke: rgb(35, 162, 236);
+  stroke-dashoffset: 125.717;
   animation: interviews-progress 1.5s;
 }
 
 .forwards-circle-fill {
-  stroke: rgb(164, 113, 172);
-  stroke-width: 12;
-  stroke-linecap: round;
-  stroke-dasharray: 339.292; 
-  stroke-dashoffset: 189.717;
+  stroke: rgb(210, 119, 224);
+  stroke-dashoffset: 219.717;
   animation: forwards-progress 1.5s;
 }
 
-svg {
-  height: 120px;
-  width: 120px;
+.circle-svg {
+  height: 160px;
+  width: 160px;
   transform: rotate(-90deg);
 }
 
 @keyframes applicants-progress {
 	from {
-		stroke-dashoffset: 339.292;
-	}
-	to {
-		stroke-dashoffset: 135.717;
-	}
-}
-
-@keyframes interviews-progress {
-	from {
-		stroke-dashoffset: 339.292;
+		stroke-dashoffset: 464.72;
 	}
 	to {
 		stroke-dashoffset: 85.717;
 	}
 }
 
-@keyframes forwards-progress {
+@keyframes interviews-progress {
 	from {
-		stroke-dashoffset: 339.292;
+		stroke-dashoffset: 464.72;
 	}
 	to {
-		stroke-dashoffset: 189.717;
+		stroke-dashoffset: 125.717;
 	}
+}
+
+@keyframes forwards-progress {
+	from {
+		stroke-dashoffset: 464.72;
+	}
+	to {
+		stroke-dashoffset: 219.717;
+	}
+}
+
+/*BAR CHART*/
+
+.bar-chart {
+  align-content: flex-start;
+  display: flex;
+  margin: 0;
+  position: relative;
+}
+
+#bar-graph-labels {
+  align-items: flex-end;
+  list-style: none;
+  font-size: .7em;
+  justify-content: space-between;
+  height: 155px;
+  position: absolute;
+  top: -5px;
+  left: -65px;
+}
+
+.bar-section {
+  display: flex;
+  flex-direction: column-reverse;
+  align-content: center;
+  justify-content: center;
+  height: 180px
+}
+
+.bar-graphs {
+  height: 180px;
+  margin: 6px;
+  transform: rotate(180deg);
+  width: 14px;
+}
+
+.bar {
+  fill:rgb(72, 193, 197);
+  width: 14px;
+  animation: barChartFill 1.5s;
+}
+
+.bar:hover {
+  fill: rgb(61, 140, 143);
+}
+
+.background-bar {
+  fill: #d1d1d1;
+  height: 150px;
+  width: 14px;
+}
+
+.day {
+  font-size: .8em;
+  text-align: center;
+  margin: 0;
+}
+
+.main-chart-label {
+  position: relative;
+  font-size: .75em;
+  background-color: white;
+  padding: 5px;
+  text-align: center;
+  border: 2px solid #d1d1d1;
+  border-radius: 20px;
+  margin: 0 auto;
+}
+
+.full-bar-chart-label {
+  bottom: -20px;
+  width: 120px;
+}
+
+.full-circle-chart-label {
+  bottom: 0px;
+  width: 190px;
+}
+
+@keyframes barChartFill {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100;
+  }
+}
+
+/*JOB DESCRIPTION SECTION /////////////*/
+
+.job-description-container {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-areas:
+    "description social"
+    "description link"
+    "description budget"
+    "description email";
+  margin-top: 40px;
+  padding: 20px 40px;
+}
+
+/*JOB DESCRIPTION*/
+
+.description {
+  grid-area: description;
+  background-color: white;
+}
+
+.job-description-table {
+  border-collapse: collapse;
+  margin: 0 30px;
+}
+
+.job-description-table td {
+  color:rgb(114, 126, 147);
+  border-bottom: 1px solid #e9e9e9;
+  padding: 20px 0;
+}
+
+ .top-row {
+  background-color: rgb(96, 106, 122);
+  padding: 10px 0; 
+}
+
+.table-header {
+  color: white;
+  display: inline-block;
+  padding-left: 30px;
+  font-size: .9em;
+}
+
+.edit-job-button {
+  border: 0;
+  color: white;
+  background-color:rgb(126, 139, 158);
+  margin-left: 16px;
+  padding: 7px 12px;
+}
+
+.edit-job-button i {
+  margin-right: 3px;
+}
+
+.edit-job-button:hover {
+  background-color: white;
+  color: rgb(126, 139, 158);
+}
+
+.table-label {
+  font-weight: 700;
+  width: 150px;
+}
+
+#table-label-description {
+  padding-bottom: 90px;
+}
+
+.hiring-lead-pic {
+  display: flex;
+  align-items: center;
+  margin-bottom: -1px;
+}
+
+.frank-pic {
+  width: 40px;
+  border-radius: 50%;
+}
+
+/*MEDIA CONTENT*/
+
+.social {
+  grid-area: social;
+}
+
+.link {
+  grid-area: link;
+}
+
+.budget {
+  grid-area: budget;
+}
+
+.email {
+  grid-area: email;
 }
