@@ -445,7 +445,7 @@ main {
 
 #full-circle-chart-label {
   bottom: -70px;
-  right: -24px;
+  right: -20px;
   width: 190px;
   position: absolute;
 }
@@ -555,7 +555,7 @@ main {
 .full-bar-chart-label {
   position: absolute;
   bottom: -56px;
-  right: 130px;
+  right: 125px;
   width: 120px;
 }
 
@@ -726,7 +726,7 @@ h4 {
 }
 
 #table-label-description {
-  padding-bottom: 90px;
+  vertical-align: text-top;
 }
 
 .hiring-lead-pic {
@@ -838,6 +838,44 @@ hr {
   width: 100%;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1230px) {
+  body {
+    grid-template-rows: 100% 5fr;  
+  }
 
+  .charts-section {
+    grid-template-columns: 100%;
+    margin: 20px 30px;
+  }
+
+  .circle-charts{
+    padding: 0px 20px 60px; 
+  }
+
+  .applicants-circle-chart {
+    margin-left: 0;
+  }
+  
+  .bar-chart {
+    padding: 0;
+    
+  }
+  
+  #bar-graph-labels {
+    padding: 0
+  }
+}
+
+@media screen and (max-width: 1090px) {
+  body {
+    grid-template-columns: 0px 1fr;
+  }
+  .sidebar {
+    display: none
+  }
+
+}
+
+@media screen and (max-width: 900px) {
+  
 }

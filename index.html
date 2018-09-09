@@ -132,180 +132,178 @@
         <h2 class="charts-hidden">Charts</h2>
       </article>
       <article class="charts-section">
-        <section>
-          <div class="circle-charts">
-            <div class="applicants-circle-chart circle-chart">
-              <h2 class="circle-chart-value">4,345</h2>
-              <p class="circle-chart-label">APPLICANTS</p>
-              <svg class="circle-svg">
-                <circle class="inner-circle" cx="80" cy="80" r="74" fill="none"/>
-                <circle class="applicants-circle-fill circle-fill" cx="80" cy="80" r="74" fill="none"/>
-              </svg>
-            </div>
-            <div class="interviews-circle-chart circle-chart">
-              <h2 class="circle-chart-value">3,235</h2>
-              <p class="circle-chart-label">INTERVIEWS</p>
-              <h3 class="main-chart-label" id="full-circle-chart-label">TOTALS  &#8729 Out of 5,231 views</h3> 
-              <svg class="circle-svg">
-                <circle class="inner-circle" cx="80" cy="80" r="74" fill="none"/>
-                <circle class="interviews-circle-fill circle-fill" cx="80" cy="80" r="74" fill="none"/>
-              </svg>
-            </div>
-            <div class="forwards-circle-chart circle-chart">
-              <h2 class="circle-chart-value">1,987</h2>
-              <p class="circle-chart-label">FORWARDS</p>
-              <svg class="circle-svg">
-                <circle class="inner-circle" cx="80" cy="80" r="74" fill="none"/>
-                <circle class="forwards-circle-fill circle-fill" cx="80" cy="80" r="74" fill="none"/>
-              </svg>
-            </div>
+        <section class="circle-charts">
+          <div class="applicants-circle-chart circle-chart">
+            <h2 class="circle-chart-value">4,345</h2>
+            <p class="circle-chart-label">APPLICANTS</p>
+            <svg class="circle-svg">
+              <circle class="inner-circle" cx="80" cy="80" r="74" fill="none"/>
+              <circle class="applicants-circle-fill circle-fill" cx="80" cy="80" r="74" fill="none"/>
+            </svg>
           </div>
-          </section>
-          <section class="bar-chart-container">
-            <div class="bar-chart">
-              <ul class="bar-section" id="bar-graph-labels">
-                <li>0</li>
-                <li>100</li>
-                <li>200</li>
-                <li>300</li>
-                <li>400</li>
-                <li>500</li>
-              </ul>
-              <div class="bar-section">
-                  <h3 class="day">S</h3>
-                  <svg class="bar-graphs">
-                    <rect class="background-bar" rx="2" ry="2"/>
-                    <rect class="bar" rx="2" ry="2" height="63" 
-                    data-day="Sunday, September 1" data-applicants="202" data-interviews="23"
-                    onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
-                  </svg>
-                </div>
-              <div class="bar-section">
-                <h3 class="day">M</h3>
-                <svg class="bar-graphs">
-                  <rect class="background-bar" rx="2" ry="2"/>
-                  <rect class="bar" rx="2" ry="2" height="103" 
-                  data-day="Monday, September 2" data-applicants="380" data-interviews="45"
-                  onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
-                </svg>
-              </div>
-              <div class="bar-section">
-                <h3 class="day">T</h3>
-                <svg class="bar-graphs">
-                  <rect class="background-bar" rx="2" ry="2"/>
-                  <rect class="bar" rx="2" ry="2" height="88" 
-                  data-day="Tuesday, September 3" data-applicants="298" data-interviews="67"
-                  onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
-                </svg>
-              </div>
-              <div class="bar-section">
-                <h3 class="day">W</h3>
-                <svg class="bar-graphs">
-                  <rect class="background-bar" rx="2" ry="2"/>
-                  <rect class="bar" rx="2" ry="2" height="98" 
-                  data-day="Wednesday, September 4" data-applicants="312" data-interviews="43"
-                  onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
-                </svg>
-              </div>
-              <div class="bar-section">
-                <h3 class="day">T</h3>
-                <svg class="bar-graphs">
-                  <rect class="background-bar" rx="2" ry="2"/>
-                  <rect class="bar" rx="2" ry="2" height="62" 
-                  data-day="Thursday, September 5" data-applicants="204" data-interviews="14"
-                  onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
-                </svg>
-              </div>
-              <div class="bar-section">
-                <h3 class="day">F</h3>
-                <svg class="bar-graphs">
-                  <rect class="background-bar" rx="2" ry="2"/>
-                  <rect class="bar" rx="2" ry="2" height="34" 
-                  data-day="Friday, September 6" data-applicants="108" data-interviews="5"
-                  onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
-                </svg>
-              </div>
-              <div class="bar-section">
+          <div class="interviews-circle-chart circle-chart">
+            <h2 class="circle-chart-value">3,235</h2>
+            <p class="circle-chart-label">INTERVIEWS</p>
+            <h3 class="main-chart-label" id="full-circle-chart-label">TOTALS  &#8729 Out of 5,231 views</h3> 
+            <svg class="circle-svg">
+              <circle class="inner-circle" cx="80" cy="80" r="74" fill="none"/>
+              <circle class="interviews-circle-fill circle-fill" cx="80" cy="80" r="74" fill="none"/>
+            </svg>
+          </div>
+          <div class="forwards-circle-chart circle-chart">
+            <h2 class="circle-chart-value">1,987</h2>
+            <p class="circle-chart-label">FORWARDS</p>
+            <svg class="circle-svg">
+              <circle class="inner-circle" cx="80" cy="80" r="74" fill="none"/>
+              <circle class="forwards-circle-fill circle-fill" cx="80" cy="80" r="74" fill="none"/>
+            </svg>
+          </div>
+        </section>
+        <section class="bar-chart-container">
+          <div class="bar-chart">
+            <ul class="bar-section" id="bar-graph-labels">
+              <li>0</li>
+              <li>100</li>
+              <li>200</li>
+              <li>300</li>
+              <li>400</li>
+              <li>500</li>
+            </ul>
+            <div class="bar-section">
                 <h3 class="day">S</h3>
                 <svg class="bar-graphs">
                   <rect class="background-bar" rx="2" ry="2"/>
-                  <rect class="bar" rx="2" ry="2" height="18" 
-                  data-day="Saturday, September 7" data-applicants="47" data-interviews="3"
+                  <rect class="bar" rx="2" ry="2" height="63" 
+                  data-day="Sunday, September 1" data-applicants="202" data-interviews="23"
                   onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
                 </svg>
               </div>
-              <div class="bar-section">
-                <h3 class="day">S</h3>
-                <svg class="bar-graphs">
-                  <rect class="background-bar" rx="2" ry="2"/>
-                  <rect class="bar" rx="2" ry="2" height="64" 
-                  data-day="Sunday, September 8" data-applicants="217" data-interviews="22"
-                  onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
-                </svg>
-              </div>
-              <div class="bar-section">
-                <h3 class="day">M</h3>
-                <svg class="bar-graphs">
-                  <rect class="background-bar" rx="2" ry="2"/>
-                  <rect class="bar" rx="2" ry="2" height="93" 
-                  data-day="Monday, September 9" data-applicants="301" data-interviews="87"
-                  onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
-                </svg>
-              </div>
-              <div class="bar-section">
-                <h3 class="day">T</h3>
-                <svg class="bar-graphs">
-                  <rect class="background-bar" rx="2" ry="2"/>
-                  <rect class="bar" rx="2" ry="2" height="78" 
-                  data-day="Tuesday, September 10" data-applicants="287" data-interviews="34"
-                  onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
-                </svg>
-              </div>
-              <div class="bar-section">
-                <h3 class="day">W</h3>
-                <svg class="bar-graphs">
-                  <rect class="background-bar" rx="2" ry="2"/>
-                  <rect class="bar" rx="2" ry="2" height="68" 
-                  data-day="Wednesday, September 11" data-applicants="247" data-interviews="43"
-                  onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
-                </svg>
-              </div>
-              <div class="bar-section">
-                <h3 class="day">T</h3>
-                <svg class="bar-graphs">
-                  <rect class="background-bar" rx="2" ry="2"/>
-                  <rect class="bar" rx="2" ry="2" height="52" 
-                  data-day="Thursday, September 12" data-applicants="198" data-interviews="29"
-                  onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
-                </svg>
-              </div>
-              <div class="bar-section">
-                <h3 class="day">F</h3>
-                <svg class="bar-graphs">
-                  <rect class="background-bar" rx="2" ry="2"/>
-                  <rect class="bar" rx="2" ry="2" height="34" 
-                  data-day="Friday, September 13" data-applicants="104" data-interviews="14"
-                  onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
-                </svg>
-              </div>
-              <div class="bar-section">
-                <h3 class="day">S</h3>
-                <svg class="bar-graphs">
-                  <rect class="background-bar" rx="2" ry="2"/>
-                  <rect class="bar" rx="2" ry="2" height="18" 
-                  data-day="Saturday, September 14" data-applicants="2" data-interviews=""
-                  onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
-                </svg>
-              </div>     
-              <h3 class="main-chart-label full-bar-chart-label">APPLICANTS/DAY</h3>    
+            <div class="bar-section">
+              <h3 class="day">M</h3>
+              <svg class="bar-graphs">
+                <rect class="background-bar" rx="2" ry="2"/>
+                <rect class="bar" rx="2" ry="2" height="103" 
+                data-day="Monday, September 2" data-applicants="380" data-interviews="45"
+                onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
+              </svg>
             </div>
-          </section>
-        </article>
-        <div class="section-break">
-            <hr>
-            <i class="fas fa-chevron-up section-break-carrot" onclick="toggleCharts()"></i>
-            <hr>
-        </div>
+            <div class="bar-section">
+              <h3 class="day">T</h3>
+              <svg class="bar-graphs">
+                <rect class="background-bar" rx="2" ry="2"/>
+                <rect class="bar" rx="2" ry="2" height="88" 
+                data-day="Tuesday, September 3" data-applicants="298" data-interviews="67"
+                onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
+              </svg>
+            </div>
+            <div class="bar-section">
+              <h3 class="day">W</h3>
+              <svg class="bar-graphs">
+                <rect class="background-bar" rx="2" ry="2"/>
+                <rect class="bar" rx="2" ry="2" height="98" 
+                data-day="Wednesday, September 4" data-applicants="312" data-interviews="43"
+                onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
+              </svg>
+            </div>
+            <div class="bar-section">
+              <h3 class="day">T</h3>
+              <svg class="bar-graphs">
+                <rect class="background-bar" rx="2" ry="2"/>
+                <rect class="bar" rx="2" ry="2" height="62" 
+                data-day="Thursday, September 5" data-applicants="204" data-interviews="14"
+                onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
+              </svg>
+            </div>
+            <div class="bar-section">
+              <h3 class="day">F</h3>
+              <svg class="bar-graphs">
+                <rect class="background-bar" rx="2" ry="2"/>
+                <rect class="bar" rx="2" ry="2" height="34" 
+                data-day="Friday, September 6" data-applicants="108" data-interviews="5"
+                onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
+              </svg>
+            </div>
+            <div class="bar-section">
+              <h3 class="day">S</h3>
+              <svg class="bar-graphs">
+                <rect class="background-bar" rx="2" ry="2"/>
+                <rect class="bar" rx="2" ry="2" height="18" 
+                data-day="Saturday, September 7" data-applicants="47" data-interviews="3"
+                onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
+              </svg>
+            </div>
+            <div class="bar-section">
+              <h3 class="day">S</h3>
+              <svg class="bar-graphs">
+                <rect class="background-bar" rx="2" ry="2"/>
+                <rect class="bar" rx="2" ry="2" height="64" 
+                data-day="Sunday, September 8" data-applicants="217" data-interviews="22"
+                onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
+              </svg>
+            </div>
+            <div class="bar-section">
+              <h3 class="day">M</h3>
+              <svg class="bar-graphs">
+                <rect class="background-bar" rx="2" ry="2"/>
+                <rect class="bar" rx="2" ry="2" height="93" 
+                data-day="Monday, September 9" data-applicants="301" data-interviews="87"
+                onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
+              </svg>
+            </div>
+            <div class="bar-section">
+              <h3 class="day">T</h3>
+              <svg class="bar-graphs">
+                <rect class="background-bar" rx="2" ry="2"/>
+                <rect class="bar" rx="2" ry="2" height="78" 
+                data-day="Tuesday, September 10" data-applicants="287" data-interviews="34"
+                onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
+              </svg>
+            </div>
+            <div class="bar-section">
+              <h3 class="day">W</h3>
+              <svg class="bar-graphs">
+                <rect class="background-bar" rx="2" ry="2"/>
+                <rect class="bar" rx="2" ry="2" height="68" 
+                data-day="Wednesday, September 11" data-applicants="247" data-interviews="43"
+                onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
+              </svg>
+            </div>
+            <div class="bar-section">
+              <h3 class="day">T</h3>
+              <svg class="bar-graphs">
+                <rect class="background-bar" rx="2" ry="2"/>
+                <rect class="bar" rx="2" ry="2" height="52" 
+                data-day="Thursday, September 12" data-applicants="198" data-interviews="29"
+                onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
+              </svg>
+            </div>
+            <div class="bar-section">
+              <h3 class="day">F</h3>
+              <svg class="bar-graphs">
+                <rect class="background-bar" rx="2" ry="2"/>
+                <rect class="bar" rx="2" ry="2" height="34" 
+                data-day="Friday, September 13" data-applicants="104" data-interviews="14"
+                onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
+              </svg>
+            </div>
+            <div class="bar-section">
+              <h3 class="day">S</h3>
+              <svg class="bar-graphs">
+                <rect class="background-bar" rx="2" ry="2"/>
+                <rect class="bar" rx="2" ry="2" height="18" 
+                data-day="Saturday, September 14" data-applicants="2" data-interviews=""
+                onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
+              </svg>
+            </div>     
+            <h3 class="main-chart-label full-bar-chart-label">APPLICANTS/DAY</h3>    
+          </div>
+        </section>
+      </article>
+      <div class="section-break">
+        <hr>
+        <i class="fas fa-chevron-up section-break-carrot" onclick="toggleCharts()"></i>
+        <hr>
+      </div>
       <section class="job-description-container">
         <article class="description"> 
           <div class="top-row">
