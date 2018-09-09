@@ -368,11 +368,12 @@ main {
 
 .charts-section {
   border-bottom: 2px solid #d1d1d1;
-  display: flex;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
   justify-content: space-between;
   align-items: center;
   margin: 20px 45px;
-  padding-bottom: 30px;
+  padding-bottom: 100px;
 }
 
 /*CIRCLE CHARTS*/
@@ -380,12 +381,12 @@ main {
 .circle-charts {
   display: flex;
   justify-content: space-between;
+  padding-right: 25px;
 }
 
 .circle-chart {
   position: relative;
-  width: 120px;
-  margin: 30px 50px 30px 20px;
+  margin: 30px 0 30px 0;
 }
 
 .applicants-circle-chart {
@@ -440,6 +441,14 @@ main {
   height: 160px;
   width: 160px;
   transform: rotate(-90deg);
+  display: block;
+}
+
+#full-circle-chart-label {
+  bottom: -70px;
+  right: -24px;
+  width: 190px;
+  position: absolute;
 }
 
 @keyframes applicants-progress {
@@ -473,9 +482,11 @@ main {
 
 .bar-chart {
   align-content: flex-start;
+  justify-content: center;
   display: flex;
   margin: 0;
   position: relative;
+  padding-left: 25px;
 }
 
 #bar-graph-labels {
@@ -484,9 +495,9 @@ main {
   font-size: .7em;
   justify-content: space-between;
   height: 155px;
-  position: absolute;
+  position: relative;
   top: -5px;
-  left: -65px;
+  left: -10px;
 }
 
 .bar-section {
@@ -515,7 +526,7 @@ main {
 }
 
 .background-bar {
-  fill: #d1d1d1;
+  fill: #d8e3e7;
   height: 150px;
   width: 14px;
 }
@@ -540,11 +551,6 @@ main {
 .full-bar-chart-label {
   bottom: -20px;
   width: 120px;
-}
-
-.full-circle-chart-label {
-  bottom: 0px;
-  width: 190px;
 }
 
 @keyframes barChartFill {
