@@ -509,7 +509,8 @@ main {
   flex-direction: column-reverse;
   align-content: center;
   justify-content: center;
-  height: 180px
+  height: 180px;
+  position: relative;
 }
 
 .bar-graphs {
@@ -604,6 +605,45 @@ main {
   margin: 10px;
   text-align: center;
 }
+
+.bar-info-popup {
+  background-color: rgb(55, 64, 80);
+  color: rgb(238, 238, 238);
+  font-size: .75em;
+  padding: 8px;
+  padding-bottom: 0;
+  position: absolute;
+  left: -83px;
+  z-index: 3;
+  width: 180px;
+}
+
+h4 {
+  text-align: center;
+  margin: 2px;
+}
+
+.bar-info-text{
+  margin: 2px;
+  text-align: center;
+}
+
+.blue-text {
+  color: rgb(64, 182, 250);
+}
+
+.triangle {
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent; 
+    border-top: 10px solid rgb(55, 64, 80);
+    height: 0; 
+    position: relative;
+    margin: 0 auto;
+    right: 2px;
+    bottom: -8px;
+    width: 0; 
+  }
+
 /*JOB DESCRIPTION SECTION /////////////*/
 
 .job-description-container {
