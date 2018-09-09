@@ -367,13 +367,12 @@ main {
 /*Charts Section/////////////////////////////////////*/
 
 .charts-section {
-  border-bottom: 2px solid #d1d1d1;
   display: grid;
   grid-template-columns: 3fr 2fr;
   justify-content: space-between;
   align-items: center;
   margin: 20px 45px;
-  padding-bottom: 100px;
+  padding-bottom: 70px;
 }
 
 /*CIRCLE CHARTS*/
@@ -480,12 +479,17 @@ main {
 
 /*BAR CHART*/
 
-.bar-chart {
-  align-content: flex-start;
+.bar-chart-container {
+  display: flex;
   justify-content: center;
+  align-content: center;
+}
+
+.bar-chart {
   display: flex;
   margin: 0;
   position: relative;
+  top: 2px;
   padding-left: 25px;
 }
 
@@ -538,7 +542,6 @@ main {
 }
 
 .main-chart-label {
-  position: relative;
   font-size: .75em;
   background-color: white;
   padding: 5px;
@@ -549,7 +552,9 @@ main {
 }
 
 .full-bar-chart-label {
-  bottom: -20px;
+  position: absolute;
+  bottom: -56px;
+  right: 130px;
   width: 120px;
 }
 
@@ -562,6 +567,43 @@ main {
   }
 }
 
+.section-break {
+  display: flex;
+  margin: 0 40px;
+}
+
+.section-break hr {
+  border-color: rgb(245, 245, 245);
+  width: 50%;
+}
+
+.section-break-carrot {
+  background-color: white;
+  border: 2px solid rgb(209, 209, 209);
+  border-radius: 50%;
+  color: rgb(209, 209, 209);
+  padding: 5px 7px;
+  margin: 0 5px;
+}
+
+.section-break-carrot:hover {
+  background-color: rgb(209, 209, 209);
+  border-color: white;
+  color: white;
+}
+
+.toggle-up-arrow {
+  transform: rotate(180deg);
+}
+
+.toggle-up {
+  display: none;
+}
+
+.charts-hidden {
+  margin: 10px;
+  text-align: center;
+}
 /*JOB DESCRIPTION SECTION /////////////*/
 
 .job-description-container {
@@ -754,4 +796,8 @@ hr {
 .input-container {
   display: flex;
   width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+
 }
