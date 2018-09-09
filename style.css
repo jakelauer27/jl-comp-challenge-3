@@ -293,6 +293,10 @@ aside tr:hover {
   user-select: none;
 }
 
+.checkbox-container:hover {
+  color: white;
+}
+
 .checkbox-container input {
   position: absolute;
   opacity: 0;
@@ -359,7 +363,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 45px;
+  margin: 20px 45px;
   padding-bottom: 30px;
 }
 
@@ -389,9 +393,9 @@ main {
 
 .circle-chart-value {
   position: absolute;
-  top: 25px;
-  left: 43px;
-  font-size: 1.8em;
+  top: 20px;
+  left: 40px;
+  font-size: 2em;
   font-weight: 400;
 }
 
@@ -403,23 +407,23 @@ main {
 .circle-fill {
   stroke-linecap: round;
   stroke-width: 12;
-  stroke-dasharray: 401.92; 
+  stroke-dasharray: 464.72; 
 }
 
 .applicants-circle-fill {
-  stroke: rgb(131, 203, 211);
+  stroke: rgb(72, 193, 197);
   stroke-dashoffset: 85.717;
   animation: applicants-progress 1.5s;
 }
 
 .interviews-circle-fill {
-  stroke: rgb(74, 168, 172);
+  stroke: rgb(35, 162, 236);
   stroke-dashoffset: 125.717;
   animation: interviews-progress 1.5s;
 }
 
 .forwards-circle-fill {
-  stroke: rgb(164, 113, 172);
+  stroke: rgb(210, 119, 224);
   stroke-dashoffset: 219.717;
   animation: forwards-progress 1.5s;
 }
@@ -432,7 +436,7 @@ main {
 
 @keyframes applicants-progress {
 	from {
-		stroke-dashoffset: 401.92;
+		stroke-dashoffset: 464.72;
 	}
 	to {
 		stroke-dashoffset: 85.717;
@@ -441,7 +445,7 @@ main {
 
 @keyframes interviews-progress {
 	from {
-		stroke-dashoffset: 401.92;
+		stroke-dashoffset: 464.72;
 	}
 	to {
 		stroke-dashoffset: 125.717;
@@ -450,7 +454,7 @@ main {
 
 @keyframes forwards-progress {
 	from {
-		stroke-dashoffset: 401.92;
+		stroke-dashoffset: 464.72;
 	}
 	to {
 		stroke-dashoffset: 219.717;
@@ -467,10 +471,11 @@ main {
 }
 
 #bar-graph-labels {
+  align-items: flex-end;
   list-style: none;
   font-size: .7em;
   justify-content: space-between;
-  height: 125px;
+  height: 155px;
   position: absolute;
   top: -5px;
   left: -65px;
@@ -481,30 +486,30 @@ main {
   flex-direction: column-reverse;
   align-content: center;
   justify-content: center;
-  height: 150px
+  height: 180px
 }
 
 .bar-graphs {
-  height: 140px;
-  margin: 5px;
+  height: 180px;
+  margin: 6px;
   transform: rotate(180deg);
-  width: 11px;
+  width: 14px;
 }
 
 .bar {
-  fill:rgb(74, 168, 172);
-  width: 10px;
+  fill:rgb(72, 193, 197);
+  width: 14px;
   animation: barChartFill 1.5s;
 }
 
 .bar:hover {
-  fill: rgb(61, 140, 143)
+  fill: rgb(61, 140, 143);
 }
 
 .background-bar {
   fill: #d1d1d1;
-  height: 120px;
-  width: 10px;
+  height: 150px;
+  width: 14px;
 }
 
 .day {
@@ -530,7 +535,7 @@ main {
 }
 
 .full-circle-chart-label {
-  bottom: 14px;
+  bottom: 0px;
   width: 190px;
 }
 
@@ -547,12 +552,13 @@ main {
 
 .job-description-container {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 60% 40%;
   grid-template-areas:
     "description social"
     "description link"
     "description budget"
     "description email";
+  margin-top: 40px;
   padding: 20px 40px;
 }
 
@@ -560,10 +566,66 @@ main {
 
 .description {
   grid-area: description;
+  background-color: white;
+}
+
+.job-description-table {
+  border-collapse: collapse;
+  margin: 0 30px;
+}
+
+.job-description-table td {
+  color:rgb(114, 126, 147);
+  border-bottom: 1px solid #e9e9e9;
+  padding: 20px 0;
+}
+
+ .top-row {
+  background-color: rgb(96, 106, 122);
+  padding: 10px 0; 
+}
+
+.table-header {
+  color: white;
+  display: inline-block;
+  padding-left: 30px;
+  font-size: .9em;
+}
+
+.edit-job-button {
+  border: 0;
+  color: white;
+  background-color:rgb(126, 139, 158);
+  margin-left: 16px;
+  padding: 7px 12px;
+}
+
+.edit-job-button i {
+  margin-right: 3px;
+}
+
+.edit-job-button:hover {
+  background-color: white;
+  color: rgb(126, 139, 158);
+}
+
+.table-label {
+  font-weight: 700;
+  width: 150px;
+}
+
+#table-label-description {
+  padding-bottom: 90px;
+}
+
+.hiring-lead-pic {
+  display: flex;
+  align-items: center;
+  margin-bottom: -1px;
 }
 
 .frank-pic {
-  width: 50px;
+  width: 40px;
   border-radius: 50%;
 }
 
