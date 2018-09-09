@@ -12,6 +12,14 @@ body {
   overflow-x: hidden;
 }
 
+button {
+  outline: none;
+}
+
+input {
+  outline: none;
+}
+
 header {
   grid-area: header;
   background-color: white;
@@ -189,7 +197,7 @@ main {
 }
 
 .secondary-nav li:hover {
-  border-color:rgb(72, 163, 243);
+  border-color:rgb(83, 173, 246);
   color:rgb(55, 64, 80);
   cursor: pointer;
 }
@@ -558,16 +566,30 @@ main {
     "description link"
     "description budget"
     "description email";
-  margin-top: 40px;
+  margin-top: 35px;
   padding: 20px 40px;
 }
 
-/*JOB DESCRIPTION*/
-
 .description {
+  border-radius: 2px;
   grid-area: description;
   background-color: white;
 }
+
+.link {
+  grid-area: link;
+}
+
+.budget {
+  grid-area: budget;
+}
+
+.email {
+  grid-area: email;
+}
+
+
+/*JOB DESCRIPTION*/
 
 .job-description-table {
   border-collapse: collapse;
@@ -577,10 +599,11 @@ main {
 .job-description-table td {
   color:rgb(114, 126, 147);
   border-bottom: 1px solid #e9e9e9;
-  padding: 20px 0;
+  padding: 22px 0;
 }
 
  .top-row {
+  border-radius: 2px 2px 0 0 ;
   background-color: rgb(96, 106, 122);
   padding: 10px 0; 
 }
@@ -629,20 +652,100 @@ main {
   border-radius: 50%;
 }
 
+#bottom-table-item1,
+#bottom-table-item2 {
+  border: 0;
+}
+
 /*MEDIA CONTENT*/
 
 .social {
+  margin-left: 40px;
+}
+
+.social h2 {
+  font-size: 1.1em;
+}
+
+.social i {
+  margin-right: 5px;
+}
+
+.social p {
+  font-size: .8em;
+}
+
+.social-buttons {
   grid-area: social;
+  display: flex;
+  flex-direction: column;
 }
 
-.link {
-  grid-area: link;
+.social-button {
+  border: 0;
+  border-radius: 2px;
+  color: white;
+  font-size: .8em;
+  font-weight: 600;
+  margin-bottom: 15px;
+  padding: 14px;
+  position: relative;
 }
 
-.budget {
-  grid-area: budget;
+.social-button:hover {
+  opacity: .7;
 }
 
-.email {
-  grid-area: email;
+.social-media-icon {
+  font-size: 1.3em;
+  position: absolute;
+  left: 20px;
+  top: 16px;
+}
+
+.facebook {
+  background-color: rgb(83, 114, 189)
+}
+
+.twitter {
+  background-color:rgb(73, 170, 234)
+}
+
+.linked-in {
+  background-color:rgb(53, 128, 153)
+}
+
+hr {
+  border-color: #dbdbdb;
+  margin: 15px 0;
+}
+
+.share-text-inputs {
+  border: 1px solid #e9e9e9;
+  padding: 12px;
+  margin-bottom: 15px;
+  width: 100%
+}
+
+.copy-link-button {
+  background-color: rgb(72, 193, 197);
+  color: white;
+  border: 0;
+  border-radius: 0 3px 3px 0;
+  height: 38px;
+  padding: 12px;
+}
+
+.copy-link-button:hover {
+  opacity: .7;
+}
+
+.upload-via-email-input {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.input-container {
+  display: flex;
+  width: 100%;
 }
