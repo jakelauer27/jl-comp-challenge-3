@@ -196,6 +196,10 @@ main {
 
 /*SIDEBAR////////////////////////////////////*/
 
+aside {
+  background-color:rgb(55, 64, 80);
+}
+
 aside section {
   background-color:rgb(55, 64, 80);
   border-bottom: 3px solid rgb(47, 54, 66);
@@ -266,6 +270,10 @@ aside tr:hover {
 }
 
 /*CHECKBOX STYLING*/ 
+
+.catagories-sidebar {
+  border-bottom: none;
+}
 
 .catagories-form {
   margin-top: 18px;
@@ -344,12 +352,15 @@ main {
   color: rgb(100, 100, 100);
 }
 
-/*Charts Section*/
+/*Charts Section/////////////////////////////////////*/
 
 .charts-section {
+  border-bottom: 2px solid #d1d1d1;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  margin: 0 45px;
+  padding-bottom: 30px;
 }
 
 /*CIRCLE CHARTS*/
@@ -363,6 +374,10 @@ main {
   position: relative;
   width: 120px;
   margin: 30px 50px 30px 20px;
+}
+
+.applicants-circle-chart {
+  margin-left: -10px;
 }
 
 .circle-chart-label {
@@ -444,11 +459,10 @@ main {
 
 /*BAR CHART*/
 
-
 .bar-chart {
   align-content: flex-start;
   display: flex;
-  margin: 0 20px;
+  margin: 0;
   position: relative;
 }
 
@@ -527,4 +541,46 @@ main {
   to {
     height: 100;
   }
+}
+
+/*JOB DESCRIPTION SECTION /////////////*/
+
+.job-description-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+    "description social"
+    "description link"
+    "description budget"
+    "description email";
+  padding: 20px 40px;
+}
+
+/*JOB DESCRIPTION*/
+
+.description {
+  grid-area: description;
+}
+
+.frank-pic {
+  width: 50px;
+  border-radius: 50%;
+}
+
+/*MEDIA CONTENT*/
+
+.social {
+  grid-area: social;
+}
+
+.link {
+  grid-area: link;
+}
+
+.budget {
+  grid-area: budget;
+}
+
+.email {
+  grid-area: email;
 }
