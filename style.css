@@ -955,15 +955,27 @@ hr {
 }
 
 @media screen and (max-width: 670px) {
+  .charts-section {
+    grid-template-columns: 1fr 1fr;
+    padding-top: 20px;
+    padding-bottom: 0px;
+  }
+  
   .circle-charts {
     flex-direction: column;
     align-items: center;
-    margin-bottom: 30px
+    margin-bottom: 30px;
+    grid-column: 2;
+  }
+
+  .circle-chart {
+    margin: 10px;
   }
 
   .bar-chart {
     transform: rotate(90deg);
     margin: 90px;
+    padding-right: 100px;
   }
 
   .day,
@@ -975,12 +987,12 @@ hr {
 
   .full-bar-chart-label { 
     bottom: 76px;
-    right: -100px;
+    right: -14px;
   }
 
   #full-circle-chart-label {
-    bottom: -300px;
-    right: -30px
+    bottom: -240px;
+    right: -20px;
   }
 
   .bar-info-popup {
@@ -999,6 +1011,13 @@ hr {
     right: 6px;
   }
 
+  .bar-chart-container {
+    width: 200px;
+    margin: 0 auto;
+    grid-column: 1;
+    grid-row: 1
+  }
+
   .job-description-container {
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -1009,9 +1028,47 @@ hr {
       "email";
       grid-gap: 25px;
   }
+
+  .bar-graphs {
+    width: 18px;
+    margin: 9px;
+  }
+
+  .background-bar,
+  .bar {
+    width: 18px;
+  }
+
+  .background-bar {
+    height: 160px;
+  }
 }
 
-@media screen and (max-width: 550px) {
+/* @media screen and (max-width: 550px) {
+  
+} */
+
+
+@media screen and (max-width: 490px) {
+
+  .charts-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .circle-charts {
+    margin-bottom: 110px;
+  }
+
+  .bar-graphs {
+    width: 16px;
+    margin: 7px;
+  }
+
+  .bar-chart {
+    margin-bottom: 150px;
+  }
+
   .job-description-container {
     padding: 20px 15px;
   }
@@ -1031,7 +1088,8 @@ hr {
     padding: 7px;
   }
 
-  .main-sidebar h3 {
+  .main-sidebar h3, 
+  .checkbox-container {
     font-size: 1em;
   }
 
@@ -1040,4 +1098,26 @@ hr {
     display: block;
     border-right: 2px solid rgb(155, 169, 192);
   }
+
+  .profile-pic {
+    width: 150px;
+  }
+
+  .profile-name {
+    font-size: 1em;
+  }
+
+  .toggle-up {
+    display: none;
+  }
+
+  .bar-info-popup {
+    margin: 0px 0px 0px 45px;
+ }
+
+ .triangle {
+   transform: rotate(180deg);
+   right: 80px;
+   bottom: 54px;
+ }
 }
