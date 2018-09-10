@@ -3,7 +3,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   color: rgb(61, 61, 61);
   display: grid;
-  grid-template-columns: 190px 1fr;
+  grid-template-columns: 200px 1fr;
   grid-template-rows: 1fr 5fr;
   grid-template-areas: 
       "sidebar header"
@@ -60,14 +60,12 @@ main {
 
 .search-bar-container i:hover,
 .settings-container:hover,
-.settings-container:hover #left-arrow-icon,
 .settings-container:hover #settings-icon {
   background-color: rgb(72, 163, 243);
   color: white;
   cursor: pointer;
 }
 
-#left-arrow-icon,
 #settings-icon {
   padding-top: 22px;
   padding-bottom: 22px;
@@ -75,13 +73,31 @@ main {
 }
 
 #left-arrow-icon {
-  padding-right: 0;
-  padding-left: 20px;
+  border: none;
+  position: absolute;
+  padding: 0;
+  top: 22px;
+  left: 8px;
+  z-index: 2;
+}
+
+.rotate {
+  transform: rotate(-90deg);
+}
+
+.settings-container:hover #left-arrow-icon {
+  color: white;
+  background-color: none;
+}
+
+.settings-container {
+  position: relative;
 }
 
 #settings-icon {
-  padding-left: 0;
+  padding-left: 20px;
   padding-right: 20px;
+  position: relative;
 }
 
 .search-container {
@@ -870,12 +886,158 @@ hr {
   body {
     grid-template-columns: 0px 1fr;
   }
+
   .sidebar {
-    display: none
+    position: absolute;
+    display: block;
+    left: -200px;
+    top: 62px;
+    z-index: 3;
+    transition: .3s;
+    width: 200px;
+    height: 1545px;
+  }
+
+  .hide {
+    left: 0px;
+    display: block;
+    border-right: 2px solid rgb(155, 169, 192);
   }
 
 }
 
 @media screen and (max-width: 900px) {
+  .job-description-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "description description"
+      "description description"
+      "social budget"
+      "link email";
+      grid-gap: 25px;
+  }
+
+  .social {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 150px;
+  }
+
+  .social hr {
+    border: 0;
+  }
+
+  .social button,
+  .social input {
+    margin: 0;
+  }
+
+  .social h2 {
+    margin-top: 0;
+  }
+
+  .copy-share-text {
+    padding: 19px;
+  }
+
+  .copy-share-text,
+  .copy-link-button {
+    position: relative;
+    top: 11px;
+  }
+
+  .secondary-nav {
+    display: none;
+  }
   
+}
+
+@media screen and (max-width: 670px) {
+  .circle-charts {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px
+  }
+
+  .bar-chart {
+    transform: rotate(90deg);
+    margin: 90px;
+  }
+
+  .day,
+  .bar-info-popup,
+  .bar-section li,
+  .full-bar-chart-label {
+    transform: rotate(-90deg);
+  }
+
+  .full-bar-chart-label { 
+    bottom: 76px;
+    right: -100px;
+  }
+
+  #full-circle-chart-label {
+    bottom: -300px;
+    right: -30px
+  }
+
+  .bar-info-popup {
+     margin-bottom: 80px;
+     margin-right: 5px;
+  }
+
+  .triangle {
+    transform: rotate(90deg);
+    right: 100px;
+    bottom: 23px;
+  }
+
+  .bar-label-0 {
+    position: relative;
+    right: 6px;
+  }
+
+  .job-description-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "description"
+      "social" 
+      "budget"
+      "link" 
+      "email";
+      grid-gap: 25px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .job-description-container {
+    padding: 20px 15px;
+  }
+
+  .sidebar {
+    position: absolute;
+    display: block;
+    left: -100vw;
+    top: 62px;
+    z-index: 3;
+    width: 100vw;
+    height: auto;
+  }
+
+  .nav-table td {
+    font-size: 1.2em;
+    padding: 7px;
+  }
+
+  .main-sidebar h3 {
+    font-size: 1em;
+  }
+
+  .hide {
+    left: 0px;
+    display: block;
+    border-right: 2px solid rgb(155, 169, 192);
+  }
 }

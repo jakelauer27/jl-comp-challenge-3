@@ -1,7 +1,20 @@
 
 function toggleNav(){
   document.querySelector('.sidebar').classList.toggle('hide');
+  document.querySelector('#left-arrow-icon').classList.toggle('rotate');
   document.querySelector('body').classList.toggle('expand-body')
+}
+
+/* JavaScript Media Queries */
+if (matchMedia) {
+	const mq = window.matchMedia("(min-width: 1090px)");
+	mq.addListener(resetNav);
+}
+
+function resetNav(){
+  document.querySelector('.sidebar').classList.remove('hide');
+  document.querySelector('#left-arrow-icon').classList.remove('rotate');
+  document.querySelector('body').classList.remove('expand-body')
 }
 
 function toggleCharts() {
