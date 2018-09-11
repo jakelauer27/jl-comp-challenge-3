@@ -13,17 +13,17 @@
 <body>
   <header>
       <section class="search-bar-container">
-        <div class="settings-container" onclick="toggleNav()">
+        <div class="settings-container" aria-label="Main Settings Button" onclick="toggleNav()">
           <i class="fas fa-caret-left rotate" id="left-arrow-icon"></i>
           <i class="fas fa-list" id="settings-icon"></i>
         </div>
         <div class="search-container">
-          <i class="fas fa-search search-icon"></i>
-          <input type="text" class="search-bar" aria-label="Search Bar" placeholder="Search for a job, task, or resume">
+          <i class="fas fa-search search-icon" aria-label="Search Button"></i>
+          <input type="text" class="search-bar" aria-label="Search Bar Input" placeholder="Search for a job, task, or resume">
         </div>
-        <i class="fas fa-user-plus add-user-icon"></i>
-        <i class="far fa-calendar-alt header-calendar-icon"></i>
-        <i class="fas fa-th grid-icon"></i>
+        <i class="fas fa-user-plus add-user-icon" aria-label="Add User Button"></i>
+        <i class="far fa-calendar-alt header-calendar-icon" aria-label="Calendar Button"></i>
+        <i class="fas fa-th grid-icon" aria-label="Global Settings Button"></i>
        </section>
       <section class="banner">
         <div class="banner-profile-container">
@@ -32,21 +32,21 @@
           <p class="banner-location">Denver, Colorado &#8729 <span class="p-alt-color"> Preview this post</span></p>
         </div>
         <div class="banner-buttons-container">
-          <button id="open-button"><span class="green-dot">&#9679 </span> OPEN</button>
-          <button class="bookmark-button"><i class="fas fa-bookmark"></i></button>
-          <button class="edit-button"><i class="fas fa-pencil-alt"></i></button>
-          <button class="trash-button"><i class="fas fa-trash-alt"></i></button>
+          <button id="open-button" aria-label="Open Button"><span class="green-dot">&#9679 </span> OPEN</button>
+          <button class="bookmark-button" aria-label="Bookmark Button"><i class="fas fa-bookmark"></i></button>
+          <button class="edit-button" aria-label="Edit Button"><i class="fas fa-pencil-alt"></i></button>
+          <button class="trash-button" aria-label="Trash Button"><i class="fas fa-trash-alt"></i></button>
         </div>
       </section>
       <nav class="secondary-nav-menu-container">
         <ul class="secondary-nav">
-          <li>SUMMARY</li>
-          <li>APPLICANTS</li>
-          <li>JOB BOARD</li>
-          <li>INTERVIEWS</li>
-          <li>ACTIVITY</li>
-          <li>BROADCAST</li>
-          <li>NOTIFICATIONS</li>
+          <li aria-label="Secondary Nav Summary Button">SUMMARY</li>
+          <li aria-label="Secondary Nav Appplicants Button">APPLICANTS</li>
+          <li aria-label="Secondary Nav Job Board Button">JOB BOARD</li>
+          <li aria-label="Secondary Nav Interviews Button">INTERVIEWS</li>
+          <li aria-label="Secondary Nav Activity Button">ACTIVITY</li>
+          <li aria-label="Secondary Nav Broadcast Button">BROADCAST</li>
+          <li aria-label="Secondary Nav Notifications Button">NOTIFICATIONS</li>
         </ul>
       </nav>
   </header>
@@ -59,23 +59,23 @@
       <h3>Main</h3>
       <table class="nav-table">
        <tr>
-        <td class="table-icon"><i class="fas fa-home home-icon"></i></td>
+        <td class="table-icon" aria-label="Main Navigation Home Button"><i class="fas fa-home home-icon"></i></td>
         <td>HOME</td>
        </tr>
        <tr>
-        <td class="table-icon"><i class="fas fa-suitcase suitcase-icon"></i></td>
+        <td class="table-icon" aria-label="Main Navigation Jobs Button"><i class="fas fa-suitcase suitcase-icon"></i></td>
         <td>JOBS</td>
        </tr>
        <tr>
-        <td class="table-icon"><i class="fas fa-file-invoice resumes-icon"></i></td>
+        <td class="table-icon" aria-label="Main Navigation Resumes Button"><i class="fas fa-file-invoice resumes-icon"></i></td>
         <td>RESUMES</td>
        </tr>
        <tr>
-        <td class="table-icon"><i class="fas fa-clipboard-list tasks-icon"></i></td>
+        <td class="table-icon" aria-label="Main Navigation Tasks Button"><i class="fas fa-clipboard-list tasks-icon"></i></td>
         <td>TASKS</td>
        </tr>
        <tr>
-        <td class="table-icon"><i class="fas fa-calendar-alt calendar-icon"></i></td>
+        <td class="table-icon" aria-label="Main Navigation Calendar Button"><i class="fas fa-calendar-alt calendar-icon"></i></td>
         <td>CALENDAR</td>
        </tr>
       </table>
@@ -84,23 +84,23 @@
       <h3>Admin</h3>
       <table class="nav-table">
         <tr>
-          <td class="table-icon"><i class="fas fa-users users-icon"></i></td>
+          <td class="table-icon" aria-label="Admin Navigation Users Button"><i class="fas fa-users users-icon"></i></td>
           <td>USERS</td>
         </tr>
         <tr>
-          <td class="table-icon"><i class="fas fa-map-marker-alt map-icon"></i></td>
+          <td class="table-icon" aria-label="Admin Navigation Locations Button"><i class="fas fa-map-marker-alt map-icon"></i></td>
           <td>LOCATIONS</td>
         </tr>
         <tr>
-          <td class="table-icon"><i class="fas fa-sitemap workflows-icon"></i></td>
+          <td class="table-icon" aria-label="Admin Navigation Workflowss Button"><i class="fas fa-sitemap workflows-icon"></i></td>
           <td>WORKFLOWS</td>
           </tr>
         <tr>
-          <td class="table-icon"><i class="fas fa-id-badge jobboards-icon"></i></td>
+          <td class="table-icon" aria-label="Admin Navigation Job Boards Button"><i class="fas fa-id-badge jobboards-icon"></i></td>
           <td>JOB BOARDS</td>
           </tr>
         <tr>
-          <td class="table-icon"><i class="fas fa-comments social-icon"></td>
+          <td class="table-icon" aria-label="Admin Navigation Social Button"><i class="fas fa-comments social-icon"></td>
           <td>SOCIAL</td>
         </tr>
       </table>
@@ -109,19 +109,19 @@
       <h3>Catagories</h3>
       <form class="catagories-form">
         <label class="checkbox-container">Administrative
-          <input type="checkbox" checked="checked">
+          <input type="checkbox" checked="checked" aria-label="Catagories Admin Checkbox">
           <span class="checkmark checkmark-admin"></span>
           </label>         
           <label class="checkbox-container">Design
-            <input type="checkbox">
+            <input type="checkbox" aria-label="Catagories Design Checkbox">
             <span class="checkmark checkmark-design"></span>
           </label>  
           <label class="checkbox-container">Executive
-            <input type="checkbox">
+            <input type="checkbox" aria-label="Catagories Executive Checkbox">
             <span class="checkmark checkmark-executive"></span>
           </label>        
           <label class="checkbox-container"> Human Resources
-            <input type="checkbox">
+            <input type="checkbox" aria-label="Catagories HR Checkbox">
             <span class="checkmark checkmark-hr"></span>
           </label>
       </form>
@@ -308,7 +308,7 @@
       <article class="description"> 
         <div class="top-row">
           <h3 class="table-header">JOB DESCRIPTION</h3>
-          <button class="edit-job-button"><i class="fas fa-pencil-alt"></i>EDIT</button>
+          <button class="edit-job-button" aria-label="Edit Job Button"><i class="fas fa-pencil-alt"></i>EDIT</button>
         </div> 
         <table class="job-description-table">
           <tr>
@@ -352,15 +352,15 @@
         </table>
       </article>
       <article class="social social-buttons">
-        <button class="facebook social-button"><i class="fab fa-facebook-f social-media-icon"></i>Post to Facebook</button>
-        <button class="twitter social-button"><i class="fab fa-twitter social-media-icon"></i>Tweet this Job</button>
-        <button class="linked-in social-button"><i class="fab fa-linkedin social-media-icon"></i>Post to Linkedin</button>
+        <button class="facebook social-button" aria-label="facebook button"><i class="fab fa-facebook-f social-media-icon"></i>Post to Facebook</button>
+        <button class="twitter social-button" aria-label="twitter button"><i class="fab fa-twitter social-media-icon"></i>Tweet this Job</button>
+        <button class="linked-in social-button" aria-label="linked in button"><i class="fab fa-linkedin social-media-icon"></i>Post to Linkedin</button>
       </article>
       <article class="social link">
         <h2><i class="fas fa-globe-americas"></i>Link to this Job</h2>
         <p>Use this link to post this job via social media, email or other form of messaging.</p>
         <div class="input-container">
-          <input type="text" class="share-text-inputs copy-share-text" value="https://www.linkedin.com/in/lauerj/"><button class="copy-link-button">Copy</button>
+          <input type="text" class="share-text-inputs copy-share-text" value="https://www.linkedin.com/in/lauerj/"><button class="copy-link-button" aria-label="Copy Link Button">Copy</button>
         </div>
         <hr>
       </article>
@@ -368,7 +368,7 @@
         <h2><i class="fab fa-steam-square"></i>Use the Budget Widget</h2>       
         <p>This widget embeds the buttons for sharing the job and submitting resumes on your website.</p>
         <div class="input-container">  
-          <input type="text" class="share-text-inputs copy-share-text" value="https://www.linkedin.com/in/lauerj/"><button class="copy-link-button">Copy</button>
+          <input type="text" class="share-text-inputs copy-share-text" value="https://www.linkedin.com/in/lauerj/"><button class="copy-link-button" aria-label="Copy Link Button">Copy</button>
         </div>
         <hr>
       </article>
