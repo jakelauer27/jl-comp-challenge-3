@@ -745,6 +745,10 @@ h4 {
   vertical-align: text-top;
 }
 
+#see-more {
+  display: none;
+}
+
 .hiring-lead-pic {
   display: flex;
   align-items: center;
@@ -888,14 +892,19 @@ hr {
   }
 
   .sidebar {
-    position: absolute;
+    border-bottom: 2px solid rgb(155, 169, 192);
     display: block;
     left: -200px;
     top: 62px;
-    z-index: 3;
+    position: absolute;
     transition: .3s;
     width: 200px;
     height: 1545px;
+    z-index: 3;
+  }
+
+  .catagories-form {
+    padding-bottom: 40px;
   }
 
   .hide {
@@ -906,7 +915,7 @@ hr {
 
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 905px) {
   .job-description-container {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
@@ -950,8 +959,16 @@ hr {
 
   .secondary-nav {
     display: none;
+    flex-direction: column;
   }
-  
+
+  .secondary-nav li {
+    white-space: nowrap; 
+  }
+
+  .banner {
+    margin-top: 20px;
+  }
 }
 
 @media screen and (max-width: 670px) {
@@ -1044,9 +1061,16 @@ hr {
   }
 }
 
-/* @media screen and (max-width: 550px) {
-  
-} */
+@media screen and (max-width: 550px) {
+  .banner {
+    margin-top: 20px;
+    flex-direction: column;
+  }
+
+  h1 {
+    text-align: center;
+  }
+}
 
 
 @media screen and (max-width: 490px) {
@@ -1119,5 +1143,46 @@ hr {
    transform: rotate(180deg);
    right: 80px;
    bottom: 54px;
+ }
+
+ .search-bar {
+   display: none;
+ }
+
+ .search-container {
+   flex-grow: 0;
+ }
+
+ .search-bar-container * {
+  margin: 0 auto;
+  flex-grow: 1;
+  text-align: center;
+ }
+
+ #left-arrow-icon {
+   left: 10px;
+ }
+
+ .description-row {
+   height: 12px;
+   overflow: hidden;
+ }
+
+ .description-body {
+   display: none;
+ }
+
+ #see-more {
+   display: block;
+   margin-bottom: -1px;
+ } 
+
+ #see-more-link {
+   color: rgb(103, 184, 255);
+ }
+
+ #see-more-link:hover {
+   text-decoration: underline;
+   cursor: pointer;
  }
 }
