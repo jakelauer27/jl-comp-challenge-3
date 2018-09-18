@@ -12,8 +12,8 @@
 
  
   ## Original Composition
-  ![Original Comp](ogcomp.png)
+  ![Original Comp](images/ogcomp.png)
   
   ## My Composition
-  ![My Comp](images/mcomp1.png)
-  ![My Comp](images/mcomp2.png)
+  ![My Comp](images/mycomp1.png)
+  ![My Comp](images/mycomp2.png)
