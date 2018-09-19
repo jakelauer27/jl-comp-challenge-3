@@ -545,6 +545,7 @@ main {
 }
 
 .bar:hover {
+  cursor: pointer;
   fill: rgb(61, 140, 143);
 }
 
@@ -798,6 +799,7 @@ h4 {
 }
 
 .social-button:hover {
+  cursor: pointer;
   opacity: .7;
 }
 
@@ -842,6 +844,7 @@ hr {
 }
 
 .copy-link-button:hover {
+  cursor: pointer;
   opacity: .7;
 }
 
