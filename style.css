@@ -9,6 +9,7 @@ body {
   grid-template-areas: 
       "sidebar header"
       "sidebar main";
+  height: 100vh;
   margin: 0;
 }
 
@@ -860,9 +861,10 @@ hr {
 
 /*MEDIA QUERIES///////////////////////////////////////////////////*/
 
-@media screen and (max-width: 1230px) {
+@media screen and (max-width: 1250px) {
   body {
     grid-template-rows: 100% 5fr;  
+    height: 100%;
   }
 
   .charts-section {
