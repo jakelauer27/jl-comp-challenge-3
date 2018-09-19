@@ -13,17 +13,17 @@
 <body>
   <header>
       <section class="search-bar-container">
-        <div class="settings-container" onclick="toggleNav()">
-          <i class="fas fa-caret-left" id="left-arrow-icon"></i>
+        <div class="settings-container" aria-label="Main Settings Button" onclick="toggleNav()">
+          <i class="fas fa-caret-left rotate" id="left-arrow-icon"></i>
           <i class="fas fa-list" id="settings-icon"></i>
         </div>
         <div class="search-container">
-          <i class="fas fa-search search-icon"></i>
-          <input type="text" class="search-bar" aria-label="Search Bar" placeholder="Search for a job, task, or resume">
+          <i class="fas fa-search search-icon" aria-label="Search Button"></i>
+          <input type="text" class="search-bar" aria-label="Search Bar Input" placeholder="Search for a job, task, or resume">
         </div>
-        <i class="fas fa-user-plus add-user-icon"></i>
-        <i class="far fa-calendar-alt header-calendar-icon"></i>
-        <i class="fas fa-th grid-icon"></i>
+        <i class="fas fa-user-plus add-user-icon" aria-label="Add User Button"></i>
+        <i class="far fa-calendar-alt header-calendar-icon" aria-label="Calendar Button"></i>
+        <i class="fas fa-th grid-icon" aria-label="Global Settings Button"></i>
        </section>
       <section class="banner">
         <div class="banner-profile-container">
@@ -32,21 +32,22 @@
           <p class="banner-location">Denver, Colorado &#8729 <span class="p-alt-color"> Preview this post</span></p>
         </div>
         <div class="banner-buttons-container">
-          <button id="open-button"><span class="green-dot">&#9679 </span> OPEN</button>
-          <button class="bookmark-button"><i class="fas fa-bookmark"></i></button>
-          <button class="edit-button"><i class="fas fa-pencil-alt"></i></button>
-          <button class="trash-button"><i class="fas fa-trash-alt"></i></button>
+          <button id="open-button" aria-label="Open Button"><span class="green-dot">&#9679 </span> OPEN</button>
+          <button class="bookmark-button" aria-label="Bookmark Button"><i class="fas fa-bookmark"></i></button>
+          <button class="edit-button" aria-label="Edit Button"><i class="fas fa-pencil-alt"></i></button>
+          <button class="trash-button" aria-label="Trash Button"><i class="fas fa-trash-alt"></i></button>
         </div>
       </section>
       <nav class="secondary-nav-menu-container">
         <ul class="secondary-nav">
-          <li>SUMMARY</li>
-          <li>APPLICANTS</li>
-          <li>JOB BOARD</li>
-          <li>INTERVIEWS</li>
-          <li>ACTIVITY</li>
-          <li>BROADCAST</li>
-          <li>NOTIFICATIONS</li>
+          <li aria-label="Secondary Nav Summary Button"><p>SUMMARY</p></li>
+          <li aria-label="Secondary Nav Appplicants Button"><p>APPLICANTS</p></li>
+          <li aria-label="Secondary Nav Job Board Button"><p>JOB BOARD</p></li>
+          <li aria-label="Secondary Nav Interviews Button"><p>INTERVIEWS</p></li>
+          <li aria-label="Secondary Nav Activity Button"><p>ACTIVITY</p></li>
+          <li aria-label="Secondary Nav Broadcast Button"><p>BROADCAST</p></li>
+          <li aria-label="Secondary Nav Notifications Button"><p>NOTIFICATIONS</p></li>
+          <i class="fas fa-list overflow-settings-icon"></i>
         </ul>
       </nav>
   </header>
@@ -59,23 +60,23 @@
       <h3>Main</h3>
       <table class="nav-table">
        <tr>
-        <td class="table-icon"><i class="fas fa-home home-icon"></i></td>
+        <td class="table-icon" aria-label="Main Navigation Home Button"><i class="fas fa-home home-icon"></i></td>
         <td>HOME</td>
        </tr>
        <tr>
-        <td class="table-icon"><i class="fas fa-suitcase suitcase-icon"></i></td>
+        <td class="table-icon" aria-label="Main Navigation Jobs Button"><i class="fas fa-suitcase suitcase-icon"></i></td>
         <td>JOBS</td>
        </tr>
        <tr>
-        <td class="table-icon"><i class="fas fa-file-invoice resumes-icon"></i></td>
+        <td class="table-icon" aria-label="Main Navigation Resumes Button"><i class="fas fa-file-invoice resumes-icon"></i></td>
         <td>RESUMES</td>
        </tr>
        <tr>
-        <td class="table-icon"><i class="fas fa-clipboard-list tasks-icon"></i></td>
+        <td class="table-icon" aria-label="Main Navigation Tasks Button"><i class="fas fa-clipboard-list tasks-icon"></i></td>
         <td>TASKS</td>
        </tr>
        <tr>
-        <td class="table-icon"><i class="fas fa-calendar-alt calendar-icon"></i></td>
+        <td class="table-icon" aria-label="Main Navigation Calendar Button"><i class="fas fa-calendar-alt calendar-icon"></i></td>
         <td>CALENDAR</td>
        </tr>
       </table>
@@ -84,24 +85,24 @@
       <h3>Admin</h3>
       <table class="nav-table">
         <tr>
-          <td class="table-icon"><i class="fas fa-users users-icon"></i></td>
+          <td class="table-icon" aria-label="Admin Navigation Users Button"><i class="fas fa-users users-icon"></i></td>
           <td>USERS</td>
         </tr>
         <tr>
-          <td class="table-icon"><i class="fas fa-map-marker-alt map-icon"></i></td>
+          <td class="table-icon" aria-label="Admin Navigation Locations Button"><i class="fas fa-map-marker-alt map-icon"></i></td>
           <td>LOCATIONS</td>
         </tr>
         <tr>
-          <td class="table-icon"><i class="fas fa-sitemap workflows-icon"></i></td>
+          <td class="table-icon" aria-label="Admin Navigation Workflowss Button"><i class="fas fa-sitemap workflows-icon"></i></td>
           <td>WORKFLOWS</td>
-          </tr>
+        </tr>
         <tr>
-          <td class="table-icon"><i class="fas fa-id-badge jobboards-icon"></i></td>
+          <td class="table-icon" aria-label="Admin Navigation Job Boards Button"><i class="fas fa-id-badge jobboards-icon"></i></td>
           <td>JOB BOARDS</td>
-          </tr>
+        </tr>
         <tr>
-          <td class="table-icon"><i class="fas fa-comments social-icon"></td>
-          <td>SOCIAL</td>
+          <td class="table-icon" aria-label="Admin Navigation Social Button"><i class="fas fa-comments social-icon"></td>
+        <td>SOCIAL</td>
         </tr>
       </table>
     </section>
@@ -109,277 +110,277 @@
       <h3>Catagories</h3>
       <form class="catagories-form">
         <label class="checkbox-container">Administrative
-          <input type="checkbox" checked="checked">
+          <input type="checkbox" checked="checked" aria-label="Catagories Admin Checkbox">
           <span class="checkmark checkmark-admin"></span>
           </label>         
           <label class="checkbox-container">Design
-            <input type="checkbox">
+            <input type="checkbox" aria-label="Catagories Design Checkbox">
             <span class="checkmark checkmark-design"></span>
           </label>  
           <label class="checkbox-container">Executive
-            <input type="checkbox">
+            <input type="checkbox" aria-label="Catagories Executive Checkbox">
             <span class="checkmark checkmark-executive"></span>
           </label>        
           <label class="checkbox-container"> Human Resources
-            <input type="checkbox">
+            <input type="checkbox" aria-label="Catagories HR Checkbox">
             <span class="checkmark checkmark-hr"></span>
           </label>
       </form>
     </section>
   </aside>
   <main>
-      <article class="charts-mini-menu toggle-up">
-        <h2 class="charts-hidden">Charts</h2>
-      </article>
-      <article class="charts-section">
-        <section>
-          <div class="circle-charts">
-            <div class="applicants-circle-chart circle-chart">
-              <h2 class="circle-chart-value">4,345</h2>
-              <p class="circle-chart-label">APPLICANTS</p>
-              <svg class="circle-svg">
-                <circle class="inner-circle" cx="80" cy="80" r="74" fill="none"/>
-                <circle class="applicants-circle-fill circle-fill" cx="80" cy="80" r="74" fill="none"/>
-              </svg>
-            </div>
-            <div class="interviews-circle-chart circle-chart">
-              <h2 class="circle-chart-value">3,235</h2>
-              <p class="circle-chart-label">INTERVIEWS</p>
-              <h3 class="main-chart-label" id="full-circle-chart-label">TOTALS  &#8729 Out of 5,231 views</h3> 
-              <svg class="circle-svg">
-                <circle class="inner-circle" cx="80" cy="80" r="74" fill="none"/>
-                <circle class="interviews-circle-fill circle-fill" cx="80" cy="80" r="74" fill="none"/>
-              </svg>
-            </div>
-            <div class="forwards-circle-chart circle-chart">
-              <h2 class="circle-chart-value">1,987</h2>
-              <p class="circle-chart-label">FORWARDS</p>
-              <svg class="circle-svg">
-                <circle class="inner-circle" cx="80" cy="80" r="74" fill="none"/>
-                <circle class="forwards-circle-fill circle-fill" cx="80" cy="80" r="74" fill="none"/>
-              </svg>
-            </div>
-          </div>
-          </section>
-          <section class="bar-chart-container">
-            <div class="bar-chart">
-              <ul class="bar-section" id="bar-graph-labels">
-                <li>0</li>
-                <li>100</li>
-                <li>200</li>
-                <li>300</li>
-                <li>400</li>
-                <li>500</li>
-              </ul>
-              <div class="bar-section">
-                  <h3 class="day">S</h3>
-                  <svg class="bar-graphs">
-                    <rect class="background-bar" rx="2" ry="2"/>
-                    <rect class="bar" rx="2" ry="2" height="63" 
-                    data-day="Sunday, September 1" data-applicants="202" data-interviews="23"
-                    onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
-                  </svg>
-                </div>
-              <div class="bar-section">
-                <h3 class="day">M</h3>
-                <svg class="bar-graphs">
-                  <rect class="background-bar" rx="2" ry="2"/>
-                  <rect class="bar" rx="2" ry="2" height="103" 
-                  data-day="Monday, September 2" data-applicants="380" data-interviews="45"
-                  onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
-                </svg>
-              </div>
-              <div class="bar-section">
-                <h3 class="day">T</h3>
-                <svg class="bar-graphs">
-                  <rect class="background-bar" rx="2" ry="2"/>
-                  <rect class="bar" rx="2" ry="2" height="88" 
-                  data-day="Tuesday, September 3" data-applicants="298" data-interviews="67"
-                  onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
-                </svg>
-              </div>
-              <div class="bar-section">
-                <h3 class="day">W</h3>
-                <svg class="bar-graphs">
-                  <rect class="background-bar" rx="2" ry="2"/>
-                  <rect class="bar" rx="2" ry="2" height="98" 
-                  data-day="Wednesday, September 4" data-applicants="312" data-interviews="43"
-                  onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
-                </svg>
-              </div>
-              <div class="bar-section">
-                <h3 class="day">T</h3>
-                <svg class="bar-graphs">
-                  <rect class="background-bar" rx="2" ry="2"/>
-                  <rect class="bar" rx="2" ry="2" height="62" 
-                  data-day="Thursday, September 5" data-applicants="204" data-interviews="14"
-                  onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
-                </svg>
-              </div>
-              <div class="bar-section">
-                <h3 class="day">F</h3>
-                <svg class="bar-graphs">
-                  <rect class="background-bar" rx="2" ry="2"/>
-                  <rect class="bar" rx="2" ry="2" height="34" 
-                  data-day="Friday, September 6" data-applicants="108" data-interviews="5"
-                  onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
-                </svg>
-              </div>
-              <div class="bar-section">
-                <h3 class="day">S</h3>
-                <svg class="bar-graphs">
-                  <rect class="background-bar" rx="2" ry="2"/>
-                  <rect class="bar" rx="2" ry="2" height="18" 
-                  data-day="Saturday, September 7" data-applicants="47" data-interviews="3"
-                  onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
-                </svg>
-              </div>
-              <div class="bar-section">
-                <h3 class="day">S</h3>
-                <svg class="bar-graphs">
-                  <rect class="background-bar" rx="2" ry="2"/>
-                  <rect class="bar" rx="2" ry="2" height="64" 
-                  data-day="Sunday, September 8" data-applicants="217" data-interviews="22"
-                  onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
-                </svg>
-              </div>
-              <div class="bar-section">
-                <h3 class="day">M</h3>
-                <svg class="bar-graphs">
-                  <rect class="background-bar" rx="2" ry="2"/>
-                  <rect class="bar" rx="2" ry="2" height="93" 
-                  data-day="Monday, September 9" data-applicants="301" data-interviews="87"
-                  onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
-                </svg>
-              </div>
-              <div class="bar-section">
-                <h3 class="day">T</h3>
-                <svg class="bar-graphs">
-                  <rect class="background-bar" rx="2" ry="2"/>
-                  <rect class="bar" rx="2" ry="2" height="78" 
-                  data-day="Tuesday, September 10" data-applicants="287" data-interviews="34"
-                  onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
-                </svg>
-              </div>
-              <div class="bar-section">
-                <h3 class="day">W</h3>
-                <svg class="bar-graphs">
-                  <rect class="background-bar" rx="2" ry="2"/>
-                  <rect class="bar" rx="2" ry="2" height="68" 
-                  data-day="Wednesday, September 11" data-applicants="247" data-interviews="43"
-                  onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
-                </svg>
-              </div>
-              <div class="bar-section">
-                <h3 class="day">T</h3>
-                <svg class="bar-graphs">
-                  <rect class="background-bar" rx="2" ry="2"/>
-                  <rect class="bar" rx="2" ry="2" height="52" 
-                  data-day="Thursday, September 12" data-applicants="198" data-interviews="29"
-                  onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
-                </svg>
-              </div>
-              <div class="bar-section">
-                <h3 class="day">F</h3>
-                <svg class="bar-graphs">
-                  <rect class="background-bar" rx="2" ry="2"/>
-                  <rect class="bar" rx="2" ry="2" height="34" 
-                  data-day="Friday, September 13" data-applicants="104" data-interviews="14"
-                  onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
-                </svg>
-              </div>
-              <div class="bar-section">
-                <h3 class="day">S</h3>
-                <svg class="bar-graphs">
-                  <rect class="background-bar" rx="2" ry="2"/>
-                  <rect class="bar" rx="2" ry="2" height="18" 
-                  data-day="Saturday, September 14" data-applicants="2" data-interviews=""
-                  onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
-                </svg>
-              </div>     
-              <h3 class="main-chart-label full-bar-chart-label">APPLICANTS/DAY</h3>    
-            </div>
-          </section>
-        </article>
-        <div class="section-break">
-            <hr>
-            <i class="fas fa-chevron-up section-break-carrot" onclick="toggleCharts()"></i>
-            <hr>
+    <article class="charts-mini-menu toggle-up">
+      <h2 class="charts-hidden">CHARTS</h2>
+    </article>
+    <article class="charts-section">
+      <section class="circle-charts">
+        <div class="applicants-circle-chart circle-chart">
+          <h2 class="circle-chart-value">4,345</h2>
+          <p class="circle-chart-label">APPLICANTS</p>
+          <svg class="circle-svg">
+            <circle class="inner-circle" cx="80" cy="80" r="74" fill="none"/>
+            <circle class="applicants-circle-fill circle-fill" cx="80" cy="80" r="74" fill="none"/>
+          </svg>
         </div>
-      <section class="job-description-container">
-        <article class="description"> 
-          <div class="top-row">
-            <h3 class="table-header">JOB DESCRIPTION</h3>
-            <button class="edit-job-button"><i class="fas fa-pencil-alt"></i>EDIT</button>
-          </div> 
-          <table class="job-description-table">
-            <tr>
-              <td class="table-label">POSITION TITLE</td>
-              <td>Software Engineer</td>
-            </tr>
-            <tr>
-              <td class="table-label">LOCATION</td>
-              <td>Denver, CO</td>
-            </tr>
-            <tr>
-              <td class="table-label">EMPLOYMENT TYPE</td>
-              <td>Full-time</td>
-            </tr>
-            <tr>
-              <td class="table-label">EXPERIENCE</td>
-              <td>Entry-Level</td>
-            </tr>
-            <tr>
-              <td class="table-label">STATUS</td>
-              <td>Open</td>
-            </tr>
-            <tr>
-              <td class="table-label" id="table-label-description">DESCRIPTION</td>
-              <td>Analyzing Information , General Programming Skills, 
-                Software Design, Software Debugging, Software Documentation, 
-                Software Testing, Problem Solving, Teamwork, Software 
-                Development Fundamentals, Software Development Process, 
-                Software Requirements</td>
-            </tr>
-            <tr>
-              <td class="table-label">HIRING LEAD</td>
-              <td class="hiring-lead-pic"><img src="images/frank-sinatra.jpg" rel="frank-sinatra-profile-pic" class="frank-pic"> &nbsp Frank Sinatra</td>
-            </tr>
-            <tr>
-              <td class="table-label" id="bottom-table-item1">APPROVED SALARY</td>
-              <td id="bottom-table-item2">$75,000</td>
-            </tr>
-          </table>
-        </article>
-        <article class="social social-buttons">
-          <button class="facebook social-button"><i class="fab fa-facebook-f social-media-icon"></i>Post to Facebook</button>
-          <button class="twitter social-button"><i class="fab fa-twitter social-media-icon"></i>Tweet this Job</button>
-          <button class="linked-in social-button"><i class="fab fa-linkedin social-media-icon"></i>Post to Linkedin</button>
-        </article>
-        <article class="social link">
-          <h2><i class="fas fa-globe-americas"></i>Link to this Job</h2>
-          <p>Use this link to post this job via social media, email or other form of messaging.</p>
-          <div class="input-container">
-            <input type="text" class="share-text-inputs" value="https://www.linkedin.com/in/lauerj/"><button class="copy-link-button">Copy</button>
-          </div>
-          <hr>
-        </article>
-        <article class="social budget">
-          <h2><i class="fab fa-steam-square"></i>Use the Budget Widget</h2>       
-          <p>This widget embeds the buttons for sharing the job and submitting resumes on your website.</p>
-          <div class="input-container">  
-            <input type="text" class="share-text-inputs" value="https://www.linkedin.com/in/lauerj/"><button class="copy-link-button">Copy</button>
-          </div>
-          <hr>
-        </article>
-        <article class="social email">
-          <h2><i class="fas fa-paper-plane"></i>Upload Resumes by Email</h2>
-          <p>You can automatically upload multiple resumes to this job by emailing the address below.</p>
-          <div class="input-container">
-            <input type="text" class="share-text-inputs upload-via-email-input" value="jake.lauer27@gmail.com">
-          </div>
-        </article>
+        <div class="interviews-circle-chart circle-chart">
+          <h2 class="circle-chart-value">3,235</h2>
+          <p class="circle-chart-label">INTERVIEWS</p>
+          <h3 class="main-chart-label" id="full-circle-chart-label">TOTALS  &#8729 Out of 5,231 views</h3> 
+          <svg class="circle-svg">
+            <circle class="inner-circle" cx="80" cy="80" r="74" fill="none"/>
+            <circle class="interviews-circle-fill circle-fill" cx="80" cy="80" r="74" fill="none"/>
+          </svg>
+        </div>
+        <div class="forwards-circle-chart circle-chart">
+          <h2 class="circle-chart-value">1,987</h2>
+          <p class="circle-chart-label">FORWARDS</p>
+          <svg class="circle-svg">
+            <circle class="inner-circle" cx="80" cy="80" r="74" fill="none"/>
+            <circle class="forwards-circle-fill circle-fill" cx="80" cy="80" r="74" fill="none"/>
+          </svg>
+        </div>
       </section>
+      <section class="bar-chart-container">
+        <div class="bar-chart">
+          <ul class="bar-section" id="bar-graph-labels">
+            <li class="bar-label-0">0</li>
+            <li>100</li>
+            <li>200</li>
+            <li>300</li>
+            <li>400</li>
+            <li>500</li>
+          </ul>
+          <div class="bar-section">
+              <h3 class="day">S</h3>
+              <svg class="bar-graphs">
+                <rect class="background-bar" rx="2" ry="2"/>
+                <rect class="bar" rx="2" ry="2" height="63" 
+                data-day="Sunday, September 1" data-applicants="202" data-interviews="23"
+                onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
+              </svg>
+            </div>
+          <div class="bar-section">
+            <h3 class="day">M</h3>
+            <svg class="bar-graphs">
+              <rect class="background-bar" rx="2" ry="2"/>
+              <rect class="bar" rx="2" ry="2" height="103" 
+              data-day="Monday, September 2" data-applicants="380" data-interviews="45"
+              onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
+            </svg>
+          </div>
+          <div class="bar-section">
+            <h3 class="day">T</h3>
+            <svg class="bar-graphs">
+              <rect class="background-bar" rx="2" ry="2"/>
+              <rect class="bar" rx="2" ry="2" height="88" 
+              data-day="Tuesday, September 3" data-applicants="298" data-interviews="67"
+              onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
+            </svg>
+          </div>
+          <div class="bar-section">
+            <h3 class="day">W</h3>
+            <svg class="bar-graphs">
+              <rect class="background-bar" rx="2" ry="2"/>
+              <rect class="bar" rx="2" ry="2" height="98" 
+              data-day="Wednesday, September 4" data-applicants="312" data-interviews="43"
+              onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
+            </svg>
+          </div>
+          <div class="bar-section">
+            <h3 class="day">T</h3>
+            <svg class="bar-graphs">
+              <rect class="background-bar" rx="2" ry="2"/>
+              <rect class="bar" rx="2" ry="2" height="62" 
+              data-day="Thursday, September 5" data-applicants="204" data-interviews="14"
+              onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
+            </svg>
+          </div>
+          <div class="bar-section">
+            <h3 class="day">F</h3>
+            <svg class="bar-graphs">
+              <rect class="background-bar" rx="2" ry="2"/>
+              <rect class="bar" rx="2" ry="2" height="34" 
+              data-day="Friday, September 6" data-applicants="108" data-interviews="5"
+              onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
+            </svg>
+          </div>
+          <div class="bar-section">
+            <h3 class="day">S</h3>
+            <svg class="bar-graphs">
+              <rect class="background-bar" rx="2" ry="2"/>
+              <rect class="bar" rx="2" ry="2" height="18" 
+              data-day="Saturday, September 7" data-applicants="47" data-interviews="3"
+              onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
+            </svg>
+          </div>
+          <div class="bar-section">
+            <h3 class="day">S</h3>
+            <svg class="bar-graphs">
+              <rect class="background-bar" rx="2" ry="2"/>
+              <rect class="bar" rx="2" ry="2" height="64" 
+              data-day="Sunday, September 8" data-applicants="217" data-interviews="22"
+              onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
+            </svg>
+          </div>
+          <div class="bar-section">
+            <h3 class="day">M</h3>
+            <svg class="bar-graphs">
+              <rect class="background-bar" rx="2" ry="2"/>
+              <rect class="bar" rx="2" ry="2" height="93" 
+              data-day="Monday, September 9" data-applicants="301" data-interviews="87"
+              onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
+            </svg>
+          </div>
+          <div class="bar-section">
+            <h3 class="day">T</h3>
+            <svg class="bar-graphs">
+              <rect class="background-bar" rx="2" ry="2"/>
+              <rect class="bar" rx="2" ry="2" height="78" 
+              data-day="Tuesday, September 10" data-applicants="287" data-interviews="34"
+              onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
+            </svg>
+          </div>
+          <div class="bar-section">
+            <h3 class="day">W</h3>
+            <svg class="bar-graphs">
+              <rect class="background-bar" rx="2" ry="2"/>
+              <rect class="bar" rx="2" ry="2" height="68" 
+              data-day="Wednesday, September 11" data-applicants="247" data-interviews="43"
+              onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
+            </svg>
+          </div>
+          <div class="bar-section">
+            <h3 class="day">T</h3>
+            <svg class="bar-graphs">
+              <rect class="background-bar" rx="2" ry="2"/>
+              <rect class="bar" rx="2" ry="2" height="52" 
+              data-day="Thursday, September 12" data-applicants="198" data-interviews="29"
+              onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
+            </svg>
+          </div>
+          <div class="bar-section">
+            <h3 class="day">F</h3>
+            <svg class="bar-graphs">
+              <rect class="background-bar" rx="2" ry="2"/>
+              <rect class="bar" rx="2" ry="2" height="34" 
+              data-day="Friday, September 13" data-applicants="104" data-interviews="14"
+              onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
+            </svg>
+          </div>
+          <div class="bar-section">
+            <h3 class="day">S</h3>
+            <svg class="bar-graphs">
+              <rect class="background-bar" rx="2" ry="2"/>
+              <rect class="bar" rx="2" ry="2" height="18" 
+              data-day="Saturday, September 14" data-applicants="2" data-interviews=""
+              onmouseover="showPopup(this)" onmouseout="removePopup(this)"/>
+            </svg>
+          </div>     
+          <h3 class="main-chart-label full-bar-chart-label">APPLICANTS/DAY</h3>    
+        </div>
+      </section>
+    </article>
+    <div class="section-break">
+      <hr>
+      <i class="fas fa-chevron-up section-break-carrot" onclick="toggleCharts()"></i>
+      <hr>
+    </div>
+    <section class="job-description-container">
+      <article class="description"> 
+        <div class="top-row">
+          <h3 class="table-header">JOB DESCRIPTION</h3>
+          <button class="edit-job-button" aria-label="Edit Job Button"><i class="fas fa-pencil-alt"></i>EDIT</button>
+        </div> 
+        <table class="job-description-table">
+          <tr>
+            <td class="table-label">POSITION TITLE</td>
+            <td>Software Engineer</td>
+          </tr>
+          <tr>
+            <td class="table-label">LOCATION</td>
+            <td>Denver, CO</td>
+          </tr>
+          <tr>
+            <td class="table-label">EMPLOYMENT TYPE</td>
+            <td>Full-time</td>
+          </tr>
+          <tr>
+            <td class="table-label">EXPERIENCE</td>
+            <td>Entry-Level</td>
+          </tr>
+          <tr>
+            <td class="table-label">STATUS</td>
+            <td>Open</td>
+          </tr>
+          <tr>
+            <td class="table-label" id="table-label-description">DESCRIPTION</td>
+            <td class="description-body">Analyzing Information , General Programming Skills, 
+              Software Design, Software Debugging, Software Documentation, 
+              Software Testing, Problem Solving, Teamwork, Software 
+              Development Fundamentals, Software Development Process, 
+              Software Requirements</td>
+            <td id="see-more">
+              Analyzing Information , General Programming <span id="see-more-link"> read more...</span></td>
+          </tr>
+          <tr class='description-row'>
+            <td class="table-label">HIRING LEAD</td>
+            <td class="hiring-lead-pic"><img src="images/frank-sinatra.jpg" rel="frank-sinatra-profile-pic" class="frank-pic"> &nbsp Frank Sinatra</td>
+          </tr>
+          <tr>
+            <td class="table-label" id="bottom-table-item1">APPROVED SALARY</td>
+            <td id="bottom-table-item2">$75,000</td>
+          </tr>
+        </table>
+      </article>
+      <article class="social social-buttons">
+        <button class="facebook social-button" aria-label="facebook button"><i class="fab fa-facebook-f social-media-icon"></i>Post to Facebook</button>
+        <button class="twitter social-button" aria-label="twitter button"><i class="fab fa-twitter social-media-icon"></i>Tweet this Job</button>
+        <button class="linked-in social-button" aria-label="linked in button"><i class="fab fa-linkedin social-media-icon"></i>Post to Linkedin</button>
+      </article>
+      <article class="social link">
+        <h2><i class="fas fa-globe-americas"></i>Link to this Job</h2>
+        <p>Use this link to post this job via social media, email or other form of messaging.</p>
+        <div class="input-container">
+          <input type="text" class="share-text-inputs copy-share-text" value="https://www.linkedin.com/in/lauerj/"><button class="copy-link-button" aria-label="Copy Link Button">Copy</button>
+        </div>
+        <hr>
+      </article>
+      <article class="social budget">
+        <h2><i class="fab fa-steam-square"></i>Use the Budget Widget</h2>       
+        <p>This widget embeds the buttons for sharing the job and submitting resumes on your website.</p>
+        <div class="input-container">  
+          <input type="text" class="share-text-inputs copy-share-text" value="https://www.linkedin.com/in/lauerj/"><button class="copy-link-button" aria-label="Copy Link Button">Copy</button>
+        </div>
+        <hr>
+      </article>
+      <article class="social email">
+        <h2><i class="fas fa-paper-plane"></i>Upload Resumes by Email</h2>
+        <p>You can automatically upload multiple resumes to this job by emailing the address below.</p>
+        <div class="input-container">
+          <input type="text" class="share-text-inputs upload-via-email-input" value="jake.lauer27@gmail.com">
+        </div>
+      </article>
+    </section>
   </main>
   <script src="scripts.js"></script>
 </body>
